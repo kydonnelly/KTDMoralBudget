@@ -82,13 +82,12 @@ extension BuildBudgetViewController {
     private func refreshPercentageLabel() {
         let totalPercentage = self.allocations.reduce(0, +)
         let visiblePercentage = round(totalPercentage * 1000.0) / 10.0
-        self.totalPercentLabel.text = "\(visiblePercentage)%"
+        self.totalPercentLabel.text = "Total: \(visiblePercentage)%"
         
-        if visiblePercentage == 100.0 {
-            self.totalPercentLabel.textColor = .green
-        } else {
-            self.totalPercentLabel.textColor = .red
-        }
+        // scale from green at 100% to red at 50%
+        self.totalPercentLabel.textColor = UIColor(red: CGFloat(abs(visiblePercentage - 100.0)) * 0.02,
+                                                   green: 1.0 - CGFloat(abs(visiblePercentage - 100.0)) * 0.02,
+                                                   blue: 0.2, alpha: 1)
     }
     
     @IBAction func tappedPercentageButton() {
