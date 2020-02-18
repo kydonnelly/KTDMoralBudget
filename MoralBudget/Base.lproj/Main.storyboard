@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="o5a-mt-BsI">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Gmv-uf-bGT">
+            <objects>
+                <navigationController id="o5a-mt-BsI" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nDl-ZB-ipx">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="cTl-Ri-M4H" kind="relationship" relationship="rootViewController" id="pAP-Wh-d3q"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nLM-wn-hPJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1542" y="130"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="g20-td-k3X">
+            <objects>
+                <viewController id="cTl-Ri-M4H" customClass="RootViewController" customModule="MoralBudget" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0tf-p7-Jbi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moral Budget" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xat-4c-DCP">
+                                <rect key="frame" x="155.5" y="464.5" width="103" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="xat-4c-DCP" firstAttribute="centerY" secondItem="rOW-iF-1Q4" secondAttribute="centerY" id="YLa-j7-54U"/>
+                            <constraint firstItem="xat-4c-DCP" firstAttribute="centerX" secondItem="rOW-iF-1Q4" secondAttribute="centerX" id="hob-IA-uSW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rOW-iF-1Q4"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="yc3-IU-2lc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vwL-zI-7He" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-746" y="130"/>
+        </scene>
+    </scenes>
+</document>
