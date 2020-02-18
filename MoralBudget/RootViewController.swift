@@ -28,6 +28,7 @@ class RootViewController : UIViewController {
         DepartmentInfo(name: "Human Services", caption: "ppl power", details: "services the humans"),
         DepartmentInfo(name: "Library", caption: "books", details: "it's always a fun day at your local library"),
         DepartmentInfo(name: "Parks and Recreation", caption: "trees", details: "fun in the sun"),
+        DepartmentInfo(name: "Government Operations", caption: "running", details: "keeps the government operating"),
         DepartmentInfo(name: "Planning and Building", caption: "jackhammer and nails", details: "in charge of planning and building buildings")])
         
         self.navigationController?.pushViewController(buildBudgetVC, animated: true)

@@ -136,7 +136,11 @@
                         <viewLayoutGuide key="safeArea" id="SzZ-qx-0xM"/>
                     </view>
                     <navigationItem key="navigationItem" title="Build A Budget" id="TNc-i0-Eue">
-                        <barButtonItem key="rightBarButtonItem" title="Next" id="lSq-q6-ZeT"/>
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="lSq-q6-ZeT">
+                            <connections>
+                                <action selector="tappedNextButton" destination="lkx-ob-erh" id="jn9-RE-hr4"/>
+                            </connections>
+                        </barButtonItem>
                         <connections>
                             <outlet property="rightBarButtonItem" destination="lSq-q6-ZeT" id="y9L-qR-wcv"/>
                         </connections>

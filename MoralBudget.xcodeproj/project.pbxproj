@@ -12,6 +12,10 @@
 		27D7FE4023F8C6EA0052A2F6 /* BuildBudget.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27D7FE3F23F8C6EA0052A2F6 /* BuildBudget.storyboard */; };
 		27D7FE4423F8C7B40052A2F6 /* DepartmentSliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D7FE4323F8C7B40052A2F6 /* DepartmentSliderCell.swift */; };
 		27D7FE4823F8E4FF0052A2F6 /* DepartmentInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D7FE4723F8E4FF0052A2F6 /* DepartmentInfo.swift */; };
+		27D7FE4A23FB8C8D0052A2F6 /* BudgetResults.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27D7FE4923FB8C8D0052A2F6 /* BudgetResults.storyboard */; };
+		27D7FE4C23FB8CA30052A2F6 /* BudgetResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D7FE4B23FB8CA30052A2F6 /* BudgetResultsViewController.swift */; };
+		27D7FE4E23FB8CCD0052A2F6 /* DepartmentAllocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D7FE4D23FB8CCD0052A2F6 /* DepartmentAllocation.swift */; };
+		27D7FE5023FB8F7D0052A2F6 /* DepartmentAllocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D7FE4F23FB8F7D0052A2F6 /* DepartmentAllocationCell.swift */; };
 		27E6605923F2CCE20051B3CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E6605823F2CCE20051B3CF /* AppDelegate.swift */; };
 		27E6605B23F2CCE20051B3CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E6605A23F2CCE20051B3CF /* SceneDelegate.swift */; };
 		27E6606023F2CCE30051B3CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27E6605E23F2CCE30051B3CF /* Main.storyboard */; };
@@ -44,6 +48,10 @@
 		27D7FE3F23F8C6EA0052A2F6 /* BuildBudget.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BuildBudget.storyboard; sourceTree = "<group>"; };
 		27D7FE4323F8C7B40052A2F6 /* DepartmentSliderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentSliderCell.swift; sourceTree = "<group>"; };
 		27D7FE4723F8E4FF0052A2F6 /* DepartmentInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentInfo.swift; sourceTree = "<group>"; };
+		27D7FE4923FB8C8D0052A2F6 /* BudgetResults.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BudgetResults.storyboard; sourceTree = "<group>"; };
+		27D7FE4B23FB8CA30052A2F6 /* BudgetResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetResultsViewController.swift; sourceTree = "<group>"; };
+		27D7FE4D23FB8CCD0052A2F6 /* DepartmentAllocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentAllocation.swift; sourceTree = "<group>"; };
+		27D7FE4F23FB8F7D0052A2F6 /* DepartmentAllocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentAllocationCell.swift; sourceTree = "<group>"; };
 		27E6605523F2CCE20051B3CF /* MoralBudget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoralBudget.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27E6605823F2CCE20051B3CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27E6605A23F2CCE20051B3CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,9 +116,13 @@
 			isa = PBXGroup;
 			children = (
 				27E6605823F2CCE20051B3CF /* AppDelegate.swift */,
+				27D7FE4923FB8C8D0052A2F6 /* BudgetResults.storyboard */,
+				27D7FE4B23FB8CA30052A2F6 /* BudgetResultsViewController.swift */,
 				27D7FE3F23F8C6EA0052A2F6 /* BuildBudget.storyboard */,
 				27D7FE3D23F8C6CA0052A2F6 /* BuildBudgetViewController.swift */,
 				27D7FE4723F8E4FF0052A2F6 /* DepartmentInfo.swift */,
+				27D7FE4D23FB8CCD0052A2F6 /* DepartmentAllocation.swift */,
+				27D7FE4F23FB8F7D0052A2F6 /* DepartmentAllocationCell.swift */,
 				27D7FE4323F8C7B40052A2F6 /* DepartmentSliderCell.swift */,
 				27E6605E23F2CCE30051B3CF /* Main.storyboard */,
 				27D7FE3B23F8C68E0052A2F6 /* RootViewController.swift */,
@@ -247,6 +259,7 @@
 				27D7FE4023F8C6EA0052A2F6 /* BuildBudget.storyboard in Resources */,
 				27E6606523F2CCE40051B3CF /* LaunchScreen.storyboard in Resources */,
 				27E6606223F2CCE40051B3CF /* Assets.xcassets in Resources */,
+				27D7FE4A23FB8C8D0052A2F6 /* BudgetResults.storyboard in Resources */,
 				27E6606023F2CCE30051B3CF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,11 +286,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				27D7FE3E23F8C6CA0052A2F6 /* BuildBudgetViewController.swift in Sources */,
+				27D7FE4C23FB8CA30052A2F6 /* BudgetResultsViewController.swift in Sources */,
 				27D7FE4423F8C7B40052A2F6 /* DepartmentSliderCell.swift in Sources */,
 				27D7FE4823F8E4FF0052A2F6 /* DepartmentInfo.swift in Sources */,
+				27D7FE5023FB8F7D0052A2F6 /* DepartmentAllocationCell.swift in Sources */,
 				27E6605923F2CCE20051B3CF /* AppDelegate.swift in Sources */,
 				27E6605B23F2CCE20051B3CF /* SceneDelegate.swift in Sources */,
 				27D7FE3C23F8C68E0052A2F6 /* RootViewController.swift in Sources */,
+				27D7FE4E23FB8CCD0052A2F6 /* DepartmentAllocation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

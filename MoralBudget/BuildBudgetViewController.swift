@@ -79,8 +79,12 @@ extension BuildBudgetViewController : UITableViewDelegate {
 
 extension BuildBudgetViewController {
     
+    fileprivate func currentTotalPercentage() -> Double {
+        return self.allocations.reduce(0, +)
+    }
+    
     private func refreshPercentageLabel() {
-        let totalPercentage = self.allocations.reduce(0, +)
+        let totalPercentage = self.currentTotalPercentage()
         let visiblePercentage = round(totalPercentage * 1000.0) / 10.0
         self.totalPercentLabel.text = "Total: \(visiblePercentage)%"
         
@@ -91,7 +95,13 @@ extension BuildBudgetViewController {
     }
     
     @IBAction func tappedPercentageButton() {
-        let totalPercentage = self.allocations.reduce(0, +)
+        self.normalizePercentages()
+        
+        self.refreshData()
+    }
+    
+    fileprivate func normalizePercentages() {
+        let totalPercentage = self.currentTotalPercentage()
         guard totalPercentage > 0 else {
             return
         }
@@ -101,8 +111,28 @@ extension BuildBudgetViewController {
         for (index, percentage) in self.allocations.enumerated() {
             self.allocations[index] = percentage * ratio
         }
+    }
+    
+}
+
+extension BuildBudgetViewController {
+    
+    @IBAction func tappedNextButton() {
+        self.normalizePercentages()
         
-        self.refreshData()
+        var departmentAllocations: [DepartmentAllocation] = []
+        
+        for (index, info) in self.departments.enumerated() {
+            departmentAllocations.append(DepartmentAllocation(info: info, percentage: self.allocations[index]))
+        }
+        
+        let brsb = UIStoryboard(name: "BudgetResults", bundle: .main)
+        guard let brvc = brsb.instantiateInitialViewController() as? BudgetResultsViewController else {
+            preconditionFailure("unexpected storyboard setup")
+        }
+        
+        brvc.setup(allocations: departmentAllocations)
+        self.navigationController?.pushViewController(brvc, animated: true)
     }
     
 }
