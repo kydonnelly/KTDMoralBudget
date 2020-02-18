@@ -13,6 +13,8 @@ class BuildBudgetViewController : UIViewController {
     @IBOutlet var tableView: UITableView!
     @IBOutlet var totalPercentLabel: UILabel!
     
+    @IBOutlet var headerView: UIView!
+    
     // parallel arrays
     private var departments: [DepartmentInfo] = []
     private var allocations: [Double] = []
@@ -73,6 +75,14 @@ extension BuildBudgetViewController : UITableViewDelegate {
             self?.dismiss(animated: true, completion: nil)
         }))
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 44
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return self.headerView
     }
     
 }

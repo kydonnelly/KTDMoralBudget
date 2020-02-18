@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lkx-ob-erh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lkx-ob-erh">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -11,6 +10,10 @@
         <scene sceneID="KWw-kr-Q82">
             <objects>
                 <viewController id="lkx-ob-erh" customClass="BuildBudgetViewController" customModule="MoralBudget" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BGP-Yt-VNT"/>
+                        <viewControllerLayoutGuide type="bottom" id="9ZN-7J-d3k"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="YTx-zY-fk8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -18,36 +21,9 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Nvo-kC-X27">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <view key="tableHeaderView" contentMode="scaleToFill" id="rB5-mr-gLJ">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="total %" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CbW-j3-EbW">
-                                            <rect key="frame" x="323.5" y="11.5" width="52.5" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4U-3q-WvO">
-                                            <rect key="frame" x="380" y="11" width="18" height="22"/>
-                                            <state key="normal" image="arrow.clockwise" catalog="system"/>
-                                            <connections>
-                                                <action selector="tappedPercentageButton" destination="lkx-ob-erh" eventType="touchUpInside" id="Qko-ae-OsX"/>
-                                            </connections>
-                                        </button>
-                                    </subviews>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                    <constraints>
-                                        <constraint firstItem="c4U-3q-WvO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="rB5-mr-gLJ" secondAttribute="leading" constant="16" id="19T-b6-nCQ"/>
-                                        <constraint firstAttribute="trailing" secondItem="c4U-3q-WvO" secondAttribute="trailing" constant="16" id="1V0-9o-HuS"/>
-                                        <constraint firstItem="c4U-3q-WvO" firstAttribute="leading" secondItem="CbW-j3-EbW" secondAttribute="trailing" constant="4" id="Chr-Q9-c3f"/>
-                                        <constraint firstItem="c4U-3q-WvO" firstAttribute="centerY" secondItem="rB5-mr-gLJ" secondAttribute="centerY" id="IBG-da-Zpd"/>
-                                        <constraint firstItem="CbW-j3-EbW" firstAttribute="centerY" secondItem="rB5-mr-gLJ" secondAttribute="centerY" id="c82-r7-WmG"/>
-                                    </constraints>
-                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DepartmentCell" rowHeight="64" id="i5X-Nx-ldm" customClass="DepartmentSliderCell" customModule="MoralBudget" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="72" width="414" height="64"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="64"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="i5X-Nx-ldm" id="D5a-u0-C2e">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
@@ -133,7 +109,6 @@
                             <constraint firstItem="Nvo-kC-X27" firstAttribute="leading" secondItem="YTx-zY-fk8" secondAttribute="leading" id="efb-Nz-1ee"/>
                             <constraint firstAttribute="trailing" secondItem="Nvo-kC-X27" secondAttribute="trailing" id="p5j-1V-tXG"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="SzZ-qx-0xM"/>
                     </view>
                     <navigationItem key="navigationItem" title="Build A Budget" id="TNc-i0-Eue">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="lSq-q6-ZeT">
@@ -146,11 +121,39 @@
                         </connections>
                     </navigationItem>
                     <connections>
+                        <outlet property="headerView" destination="rB5-mr-gLJ" id="mnM-uL-6M5"/>
                         <outlet property="tableView" destination="Nvo-kC-X27" id="CKK-J1-xsN"/>
                         <outlet property="totalPercentLabel" destination="CbW-j3-EbW" id="d0F-9x-9my"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IeX-Gl-YDA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="rB5-mr-gLJ">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="total %" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CbW-j3-EbW">
+                            <rect key="frame" x="323.5" y="11.5" width="52.5" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4U-3q-WvO">
+                            <rect key="frame" x="380" y="11" width="18" height="22"/>
+                            <state key="normal" image="arrow.clockwise" catalog="system"/>
+                            <connections>
+                                <action selector="tappedPercentageButton" destination="lkx-ob-erh" eventType="touchUpInside" id="Qko-ae-OsX"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.96999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="c4U-3q-WvO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="rB5-mr-gLJ" secondAttribute="leading" constant="16" id="19T-b6-nCQ"/>
+                        <constraint firstAttribute="trailing" secondItem="c4U-3q-WvO" secondAttribute="trailing" constant="16" id="1V0-9o-HuS"/>
+                        <constraint firstItem="c4U-3q-WvO" firstAttribute="leading" secondItem="CbW-j3-EbW" secondAttribute="trailing" constant="4" id="Chr-Q9-c3f"/>
+                        <constraint firstItem="c4U-3q-WvO" firstAttribute="centerY" secondItem="rB5-mr-gLJ" secondAttribute="centerY" id="IBG-da-Zpd"/>
+                        <constraint firstItem="CbW-j3-EbW" firstAttribute="centerY" secondItem="rB5-mr-gLJ" secondAttribute="centerY" id="c82-r7-WmG"/>
+                    </constraints>
+                </view>
             </objects>
             <point key="canvasLocation" x="139" y="130"/>
         </scene>
