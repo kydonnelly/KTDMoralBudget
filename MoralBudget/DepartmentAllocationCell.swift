@@ -11,24 +11,24 @@ import UIKit
 public class DepartmentAllocationCell : UITableViewCell {
     
     @IBOutlet var titleLabel: UILabel!
-    @IBOutlet var subtitleLabel: UILabel!
-    
-    @IBOutlet var myPercentageLabel: UILabel!
-    @IBOutlet var cityPercentageLabel: UILabel!
-    @IBOutlet var differenceLabel: UILabel!
+    @IBOutlet var detailLabel: UILabel!
     
     func setup(departmentInfo: DepartmentInfo, myAllocation: Double, cityAllocation: Double) {
-        self.titleLabel.text = departmentInfo.name
-        self.subtitleLabel.text = departmentInfo.caption
+        let delta = Int(round(abs(myAllocation - cityAllocation) / cityAllocation * 100))
         
-        self.myPercentageLabel.text = "You gave: \(round(myAllocation * 1000.0) / 10.0)%"
-        self.cityPercentageLabel.text = "City gave: \(round(cityAllocation * 1000.0) / 10.0)%"
-        self.differenceLabel.text = "Difference: \(round((myAllocation - cityAllocation) * 1000.0) / 10.0)%"
+        if (delta == 0) {
+            self.titleLabel.text = "\(departmentInfo.name): No Change"
+            self.detailLabel.text = "\(round(cityAllocation * 1000.0) / 10.0)%"
+        } else {
+            let direction = myAllocation > cityAllocation ? "More" : "Less"
+            self.titleLabel.text = "\(departmentInfo.name): \(delta)% \(direction)"
+            self.detailLabel.text = "\(round(cityAllocation * 1000.0) / 10.0)% -> \(round(myAllocation * 1000.0) / 10.0)%"
+        }
         
         // scale from green at 50% to red at -50%
-        self.differenceLabel.textColor = UIColor(red: max(0.2, CGFloat(cityAllocation - myAllocation) * 4),
-                                                 green: max(0.2, CGFloat(myAllocation - cityAllocation) * 4),
-                                                 blue: 0.2, alpha: 1)
+        self.detailLabel.textColor = UIColor(red: 0.2 + CGFloat(cityAllocation - myAllocation) * 4,
+                                             green: 0.2 + CGFloat(myAllocation - cityAllocation) * 4,
+                                             blue: 0.2, alpha: 1)
     }
     
 }
