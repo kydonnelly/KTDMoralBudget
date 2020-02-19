@@ -23,7 +23,12 @@ public class DepartmentAllocationCell : UITableViewCell {
         
         self.myPercentageLabel.text = "You gave: \(round(myAllocation * 1000.0) / 10.0)%"
         self.cityPercentageLabel.text = "City gave: \(round(cityAllocation * 1000.0) / 10.0)%"
-        self.differenceLabel.text = "Difference: \(round(abs(myAllocation - cityAllocation) * 1000.0) / 10.0)%"
+        self.differenceLabel.text = "Difference: \(round((myAllocation - cityAllocation) * 1000.0) / 10.0)%"
+        
+        // scale from green at 50% to red at -50%
+        self.differenceLabel.textColor = UIColor(red: max(0.2, CGFloat(cityAllocation - myAllocation) * 4),
+                                                 green: max(0.2, CGFloat(myAllocation - cityAllocation) * 4),
+                                                 blue: 0.2, alpha: 1)
     }
     
 }
