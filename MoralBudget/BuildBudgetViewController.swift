@@ -15,6 +15,8 @@ class BuildBudgetViewController : UIViewController {
     
     @IBOutlet var headerView: UIView!
     
+    var shouldNormalize: Bool = false
+    
     // parallel arrays
     private var departments: [DepartmentInfo] = []
     private var allocations: [Double] = []
@@ -55,8 +57,17 @@ extension BuildBudgetViewController : UITableViewDataSource {
         let department = self.departments[indexPath.row]
         let allocation = self.allocations[indexPath.row]
         cell.setup(title: department.name, subtitle: department.caption, initialValue: allocation, updateBlock: { [weak self] (value) in
-            self?.allocations[indexPath.row] = value
-            self?.refreshPercentageLabel()
+            guard let strongSelf = self else {
+                return
+            }
+            
+            strongSelf.allocations[indexPath.row] = value
+            strongSelf.refreshPercentageLabel()
+            
+            if strongSelf.shouldNormalize {
+                strongSelf.normalizePercentages()
+                strongSelf.refreshData()
+            }
         })
         
         return cell
@@ -126,6 +137,15 @@ extension BuildBudgetViewController {
 }
 
 extension BuildBudgetViewController {
+    
+    @IBAction func tappedLockSwitch(_ lockSwitch: UISwitch) {
+        self.shouldNormalize = lockSwitch.isOn
+        
+        if self.shouldNormalize {
+            self.normalizePercentages()
+            self.refreshData()
+        }
+    }
     
     @IBAction func tappedNextButton() {
         self.normalizePercentages()

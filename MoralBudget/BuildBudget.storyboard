@@ -131,6 +131,18 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
+                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FEL-Io-2v2">
+                            <rect key="frame" x="16" y="6.5" width="51" height="31"/>
+                            <connections>
+                                <action selector="tappedLockSwitch:" destination="lkx-ob-erh" eventType="valueChanged" id="Seo-zz-qqw"/>
+                            </connections>
+                        </switch>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lock 100%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qIU-jS-5Kp">
+                            <rect key="frame" x="73" y="11.5" width="83" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="total %" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CbW-j3-EbW">
                             <rect key="frame" x="323.5" y="11.5" width="52.5" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -151,7 +163,11 @@
                         <constraint firstAttribute="trailing" secondItem="c4U-3q-WvO" secondAttribute="trailing" constant="16" id="1V0-9o-HuS"/>
                         <constraint firstItem="c4U-3q-WvO" firstAttribute="leading" secondItem="CbW-j3-EbW" secondAttribute="trailing" constant="4" id="Chr-Q9-c3f"/>
                         <constraint firstItem="c4U-3q-WvO" firstAttribute="centerY" secondItem="rB5-mr-gLJ" secondAttribute="centerY" id="IBG-da-Zpd"/>
+                        <constraint firstItem="qIU-jS-5Kp" firstAttribute="centerY" secondItem="FEL-Io-2v2" secondAttribute="centerY" id="YRx-f6-CoC"/>
+                        <constraint firstItem="qIU-jS-5Kp" firstAttribute="leading" secondItem="FEL-Io-2v2" secondAttribute="trailing" constant="8" id="bt4-nM-wKf"/>
                         <constraint firstItem="CbW-j3-EbW" firstAttribute="centerY" secondItem="rB5-mr-gLJ" secondAttribute="centerY" id="c82-r7-WmG"/>
+                        <constraint firstItem="FEL-Io-2v2" firstAttribute="centerY" secondItem="rB5-mr-gLJ" secondAttribute="centerY" id="gtl-pV-qix"/>
+                        <constraint firstItem="FEL-Io-2v2" firstAttribute="leading" secondItem="rB5-mr-gLJ" secondAttribute="leading" constant="16" id="jWr-M0-cUn"/>
                     </constraints>
                 </view>
             </objects>
