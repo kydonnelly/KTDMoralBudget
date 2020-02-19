@@ -10,9 +10,7 @@ import UIKit
 
 class RootViewController : UIViewController {
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
+    @IBAction func pressedStartButton() {
         let buildBudgetStoryboard = UIStoryboard(name: "BuildBudget", bundle: .main)
         guard let buildBudgetVC = buildBudgetStoryboard.instantiateInitialViewController() as? BuildBudgetViewController else {
             return

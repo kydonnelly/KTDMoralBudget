@@ -32,16 +32,43 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moral Budget" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xat-4c-DCP">
-                                <rect key="frame" x="155.5" y="464.5" width="103" height="21"/>
+                                <rect key="frame" x="155.5" y="205" width="103" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flP-Tq-hp6">
+                                <rect key="frame" x="32" y="250" width="350" height="81.5"/>
+                                <string key="text">A city's budget says a lot about its priorities. How much money does it spend on parks or housing? How about summer job programs and police?</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you had a say, what would your priorities be?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ua-C8-J8K">
+                                <rect key="frame" x="32" y="347.5" width="350" height="41"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p0e-qt-xME">
+                                <rect key="frame" x="167" y="412.5" width="80" height="30"/>
+                                <state key="normal" title="Get Started"/>
+                                <connections>
+                                    <action selector="pressedStartButton" destination="cTl-Ri-M4H" eventType="touchUpInside" id="Bju-Pa-Q75"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="xat-4c-DCP" firstAttribute="centerY" secondItem="rOW-iF-1Q4" secondAttribute="centerY" id="YLa-j7-54U"/>
+                            <constraint firstItem="0ua-C8-J8K" firstAttribute="top" secondItem="flP-Tq-hp6" secondAttribute="bottom" constant="16" id="TfN-d6-jtf"/>
+                            <constraint firstItem="xat-4c-DCP" firstAttribute="centerY" secondItem="rOW-iF-1Q4" secondAttribute="bottom" multiplier="0.25" id="YLa-j7-54U"/>
+                            <constraint firstItem="0ua-C8-J8K" firstAttribute="centerX" secondItem="rOW-iF-1Q4" secondAttribute="centerX" id="gCp-7q-IoF"/>
+                            <constraint firstItem="p0e-qt-xME" firstAttribute="centerX" secondItem="rOW-iF-1Q4" secondAttribute="centerX" id="gVP-JC-vgd"/>
+                            <constraint firstItem="flP-Tq-hp6" firstAttribute="top" secondItem="xat-4c-DCP" secondAttribute="bottom" constant="24" id="grt-93-0Ic"/>
                             <constraint firstItem="xat-4c-DCP" firstAttribute="centerX" secondItem="rOW-iF-1Q4" secondAttribute="centerX" id="hob-IA-uSW"/>
+                            <constraint firstItem="flP-Tq-hp6" firstAttribute="leading" secondItem="rOW-iF-1Q4" secondAttribute="leading" constant="32" id="jPx-Jg-fBk"/>
+                            <constraint firstItem="p0e-qt-xME" firstAttribute="top" secondItem="0ua-C8-J8K" secondAttribute="bottom" constant="24" id="mPK-eT-785"/>
+                            <constraint firstItem="flP-Tq-hp6" firstAttribute="centerX" secondItem="rOW-iF-1Q4" secondAttribute="centerX" id="mg9-3K-aYl"/>
+                            <constraint firstItem="0ua-C8-J8K" firstAttribute="leading" secondItem="flP-Tq-hp6" secondAttribute="leading" id="vMr-bu-wzJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rOW-iF-1Q4"/>
                     </view>

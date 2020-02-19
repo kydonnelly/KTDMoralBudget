@@ -37,23 +37,23 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Department" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="RdL-tX-O5R">
-                                                    <rect key="frame" x="16" y="2" width="159" height="38.5"/>
+                                                    <rect key="frame" x="16" y="2" width="200.5" height="38.5"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="32"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Responsibilities 1, 2, 3..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yUO-Xs-VpZ">
-                                                    <rect key="frame" x="16" y="42.5" width="159" height="19.5"/>
+                                                    <rect key="frame" x="16" y="42.5" width="200.5" height="19.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O3W-6l-XQO">
-                                                    <rect key="frame" x="191" y="5.5" width="223" height="53"/>
+                                                    <rect key="frame" x="232.5" y="5.5" width="181.5" height="53"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </view>
                                                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="EBi-Um-qSB">
-                                                    <rect key="frame" x="189" y="28.5" width="211" height="31"/>
+                                                    <rect key="frame" x="230.5" y="28.5" width="169.5" height="31"/>
                                                     <connections>
                                                         <action selector="sliderValueChanged:" destination="i5X-Nx-ldm" eventType="valueChanged" id="U6b-9p-jIN"/>
                                                     </connections>
@@ -78,7 +78,7 @@
                                                 <constraint firstItem="EBi-Um-qSB" firstAttribute="top" secondItem="zGJ-mW-9Bj" secondAttribute="bottom" constant="2" id="VPg-iA-wAP"/>
                                                 <constraint firstItem="EBi-Um-qSB" firstAttribute="leading" secondItem="RdL-tX-O5R" secondAttribute="trailing" constant="16" id="aSB-Ic-H2E"/>
                                                 <constraint firstItem="yUO-Xs-VpZ" firstAttribute="top" secondItem="RdL-tX-O5R" secondAttribute="bottom" constant="2" id="aZh-Av-iSL"/>
-                                                <constraint firstItem="EBi-Um-qSB" firstAttribute="width" secondItem="D5a-u0-C2e" secondAttribute="width" multiplier="0.5" id="hT4-Gh-vKv"/>
+                                                <constraint firstItem="EBi-Um-qSB" firstAttribute="width" secondItem="D5a-u0-C2e" secondAttribute="width" multiplier="0.4" id="hT4-Gh-vKv"/>
                                                 <constraint firstItem="2bV-jb-lID" firstAttribute="centerY" secondItem="D5a-u0-C2e" secondAttribute="centerY" id="hTo-Aa-bg8"/>
                                                 <constraint firstItem="O3W-6l-XQO" firstAttribute="top" secondItem="zGJ-mW-9Bj" secondAttribute="top" id="jG1-qb-Rdo"/>
                                                 <constraint firstItem="2bV-jb-lID" firstAttribute="leading" secondItem="D5a-u0-C2e" secondAttribute="leading" id="kaT-hp-URK"/>
