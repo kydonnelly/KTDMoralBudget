@@ -12,8 +12,7 @@ struct DepartmentInfo {
     let name: String
     let caption: String
     let details: String
+    let allocation: Double
 }
 
-extension DepartmentInfo : Decodable {
-    
-}
+extension DepartmentInfo : Decodable { }

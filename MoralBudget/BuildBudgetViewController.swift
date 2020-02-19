@@ -205,18 +205,12 @@ extension BuildBudgetViewController {
     func showResultsScreen() {
         self.normalizePercentages()
         
-        var departmentAllocations: [DepartmentAllocation] = []
-        
-        for (index, info) in self.departments.enumerated() {
-            departmentAllocations.append(DepartmentAllocation(info: info, percentage: self.allocations[index]))
-        }
-        
         let brsb = UIStoryboard(name: "BudgetResults", bundle: .main)
         guard let brvc = brsb.instantiateInitialViewController() as? BudgetResultsViewController else {
             preconditionFailure("unexpected storyboard setup")
         }
         
-        brvc.setup(allocations: departmentAllocations)
+        brvc.setup(departments: self.departments, allocations: self.allocations)
         self.navigationController?.pushViewController(brvc, animated: true)
     }
     
