@@ -176,8 +176,10 @@ extension BuildBudgetViewController {
                 self.tableView.moveRow(at: IndexPath(row: oldInfo.offset, section: 0),
                                        to: IndexPath(row: newIndex, section: 0))
             }
-            
-            self.tableView.reloadSections(IndexSet(0...0), with: .none)
+        }, completion: { [weak self] (_) in
+            // Do this after animations have completed.
+            // Reloads the department info inside the cells
+            self?.tableView.reloadSections(IndexSet(integer: 0), with: .none)
         })
     }
     
