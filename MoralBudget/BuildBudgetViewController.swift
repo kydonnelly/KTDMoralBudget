@@ -16,6 +16,7 @@ class BuildBudgetViewController : UIViewController {
     @IBOutlet var headerView: UIView!
     
     var shouldNormalize: Bool = false
+    var shouldAutoSort: Bool = false
     
     // parallel arrays
     private var departments: [DepartmentInfo] = []
@@ -68,6 +69,14 @@ extension BuildBudgetViewController : UITableViewDataSource {
                 strongSelf.normalizePercentages()
                 strongSelf.refreshData()
             }
+        }, touchUpBlock: { [weak self] in
+            guard let strongSelf = self else {
+                return
+            }
+            
+            if strongSelf.shouldAutoSort {
+                strongSelf.sortDepartmentsByAllocation()
+            }
         })
         
         return cell
@@ -89,7 +98,7 @@ extension BuildBudgetViewController : UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 44
+        return 84
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -121,6 +130,15 @@ extension BuildBudgetViewController {
         self.refreshData()
     }
     
+    @IBAction func tappedLockSwitch(_ lockSwitch: UISwitch) {
+        self.shouldNormalize = lockSwitch.isOn
+        
+        if self.shouldNormalize {
+            self.normalizePercentages()
+            self.refreshData()
+        }
+    }
+    
     fileprivate func normalizePercentages() {
         let totalPercentage = self.currentTotalPercentage()
         guard totalPercentage > 0 else {
@@ -138,14 +156,34 @@ extension BuildBudgetViewController {
 
 extension BuildBudgetViewController {
     
-    @IBAction func tappedLockSwitch(_ lockSwitch: UISwitch) {
-        self.shouldNormalize = lockSwitch.isOn
+    @IBAction func tappedAutoSort(_ sortSwitch: UISwitch) {
+        self.shouldAutoSort = sortSwitch.isOn
         
-        if self.shouldNormalize {
-            self.normalizePercentages()
-            self.refreshData()
+        if self.shouldAutoSort {
+            self.sortDepartmentsByAllocation()
         }
     }
+    
+    private func sortDepartmentsByAllocation() {
+        let sortedAllocations = self.allocations.enumerated().sorted { $0.element > $1.element }
+        let departmentsCopy = self.departments
+        
+        self.allocations = sortedAllocations.map { $0.element }
+        self.departments = sortedAllocations.map { departmentsCopy[$0.offset] }
+        
+        self.tableView.performBatchUpdates({
+            for (newIndex, oldInfo) in sortedAllocations.enumerated() {
+                self.tableView.moveRow(at: IndexPath(row: oldInfo.offset, section: 0),
+                                       to: IndexPath(row: newIndex, section: 0))
+            }
+            
+            self.tableView.reloadSections(IndexSet(0...0), with: .none)
+        })
+    }
+    
+}
+
+extension BuildBudgetViewController {
     
     @IBAction func tappedNextButton() {
         if self.currentTotalPercentage() == 1.0 {

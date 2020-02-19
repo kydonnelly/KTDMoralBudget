@@ -21,7 +21,10 @@ public class DepartmentSliderCell : UITableViewCell {
     public typealias UpdateBlock = ((_ value: Double) -> Void)
     private var updateBlock: UpdateBlock? = nil
     
-    func setup(title: String, subtitle: String, initialValue: Double, updateBlock: UpdateBlock?) {
+    public typealias TouchUpBlock = (() -> Void)
+    private var touchUpBlock: TouchUpBlock? = nil
+    
+    func setup(title: String, subtitle: String, initialValue: Double, updateBlock: UpdateBlock? = nil, touchUpBlock: TouchUpBlock? = nil) {
         self.titleLabel.text = title
         self.subtitleLabel.text = subtitle
         
@@ -29,6 +32,7 @@ public class DepartmentSliderCell : UITableViewCell {
         self.refresh(value: initialValue)
         
         self.updateBlock = updateBlock
+        self.touchUpBlock = touchUpBlock
     }
     
     @IBAction func sliderValueChanged(_ slider: UISlider) {
@@ -36,6 +40,10 @@ public class DepartmentSliderCell : UITableViewCell {
         
         self.refresh(value: value)
         self.updateBlock?(value)
+    }
+    
+    @IBAction func sliderFinishedSliding(_ slider: UISlider) {
+        self.touchUpBlock?()
     }
     
     private func refresh(value: Double) {
