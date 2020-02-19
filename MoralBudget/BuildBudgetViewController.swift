@@ -188,7 +188,7 @@ extension BuildBudgetViewController {
 extension BuildBudgetViewController {
     
     @IBAction func tappedNextButton() {
-        if self.currentTotalPercentage() == 1.0 {
+        if abs(self.currentTotalPercentage() - 1.0) < 0.01 {
             self.showResultsScreen()
         } else {
             let alert = UIAlertController(title: "Addition error!", message: "Your budget doesn't add up to 100%. Would you like to auto-adjust and continue to results?", preferredStyle: .alert)
