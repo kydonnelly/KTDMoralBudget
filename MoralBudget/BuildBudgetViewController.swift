@@ -148,6 +148,21 @@ extension BuildBudgetViewController {
     }
     
     @IBAction func tappedNextButton() {
+        if self.currentTotalPercentage() == 1.0 {
+            self.showResultsScreen()
+        } else {
+            let alert = UIAlertController(title: "Addition error!", message: "Your budget doesn't add up to 100%. Would you like to auto-adjust and continue to results?", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "cancel", style: .cancel, handler: { [weak self] _ in
+                self?.dismiss(animated: true, completion: nil)
+            }))
+            alert.addAction(UIAlertAction(title: "continue", style: .default, handler: { [weak self] _ in
+                self?.showResultsScreen()
+            }))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    func showResultsScreen() {
         self.normalizePercentages()
         
         var departmentAllocations: [DepartmentAllocation] = []
