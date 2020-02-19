@@ -1,0 +1,74 @@
+[
+    {
+        "name": "Police",
+        "caption": "Police",
+        "details": "ACAB & FTP",
+        "allocation": 0.206
+    },
+    {
+        "name": "Fire",
+        "caption": "Fire",
+        "details": "puts out fires and saves kittens",
+        "allocation": 0.104
+    },
+    {
+        "name": "Services",
+        "caption": "Human and Community Services",
+        "details": "people power",
+        "allocation": 0.060
+    },
+    {
+        "name": "Libraries",
+        "caption": "Library",
+        "details": "it's always a fun day to go to the library",
+        "allocation": 0.024
+    },
+    {
+        "name": "Parks & Rec",
+        "caption": "Parks and Recreation",
+        "details": "fun in the sun",
+        "allocation": 0.022
+    },
+    {
+        "name": "Housing",
+        "caption": "Housing and Community Development",
+        "details": "help people stay housed",
+        "allocation": 0.013
+    },
+    {
+        "name": "Debt Payment",
+        "caption": "Debt Servicing",
+        "details": "make sure the city doesn't default",
+        "allocation": 0.246
+    },
+    {
+        "name": "Infrastructure",
+        "caption": "Captial Improvement",
+        "details": "make things look nice around town",
+        "allocation": 0.040
+    },
+    {
+        "name": "Jobs",
+        "caption": "Economic and Workforce Development",
+        "details": "Training and work programs",
+        "allocation": 0.020
+    },
+    {
+        "name": "Public Works",
+        "caption": "Public Works",
+        "details": "Fix the Potholes",
+        "allocation": 0.102
+    },
+    {
+        "name": "Administrative",
+        "caption": "Government Operations",
+        "details": "help the government operate",
+        "allocation": 0.137
+    },
+    {
+        "name": "Planning",
+        "caption": "Planning and Building",
+        "details": "in charge of planning and building buildings",
+        "allocation": 0.026
+    }
+]

@@ -16,18 +16,17 @@ class RootViewController : UIViewController {
             return
         }
         
-        buildBudgetVC.setup(departments: [DepartmentInfo(name: "Police", caption: "FTP", details: "FTP, ACAB"),
-        DepartmentInfo(name: "Fire", caption: "smokey", details: "Puts out fires and saves kittens"),
-        DepartmentInfo(name: "Public Works", caption: "shovel", details: "Fix The Potholes"),
-        DepartmentInfo(name: "Jobs", caption: "Economic & Workforce Development", details: "Training and work programs"),
-        DepartmentInfo(name: "Infrastructure", caption: "Capital Improvement", details: "Makes things look nice around the city"),
-        DepartmentInfo(name: "Debt Payments", caption: "Debt Services", details: "make sure the city doesn't default"),
-        DepartmentInfo(name: "Housing", caption: "Housing & Community Development", details: "help people stay housed"),
-        DepartmentInfo(name: "Services", caption: "Human & Community Services", details: "services the humans"),
-        DepartmentInfo(name: "Libraries", caption: "books", details: "it's always a fun day at your local library"),
-        DepartmentInfo(name: "Parks & Rec", caption: "trees", details: "fun in the sun"),
-        DepartmentInfo(name: "Administrative", caption: "Government Operations", details: "keeps the government operating"),
-        DepartmentInfo(name: "Planning", caption: "Planning and Building", details: "in charge of planning and building buildings")])
+        guard let jsonPath = Bundle.main.path(forResource: "OaklandDepartments", ofType: "json") else {
+            return
+        }
+        
+        let decoder = JSONDecoder()
+        guard let data = try? Data(contentsOf: URL(fileURLWithPath: jsonPath), options: .alwaysMapped),
+              let jsonInfos = try? decoder.decode(Array<DepartmentInfo>.self, from: data) else {
+            return
+        }
+        
+        buildBudgetVC.setup(departments: jsonInfos)
         
         self.navigationController?.pushViewController(buildBudgetVC, animated: true)
     }

@@ -16,6 +16,7 @@
 		27D7FE4C23FB8CA30052A2F6 /* BudgetResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D7FE4B23FB8CA30052A2F6 /* BudgetResultsViewController.swift */; };
 		27D7FE4E23FB8CCD0052A2F6 /* DepartmentAllocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D7FE4D23FB8CCD0052A2F6 /* DepartmentAllocation.swift */; };
 		27D7FE5023FB8F7D0052A2F6 /* DepartmentAllocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D7FE4F23FB8F7D0052A2F6 /* DepartmentAllocationCell.swift */; };
+		27D7FE5623FDFC790052A2F6 /* OaklandDepartments.json in Resources */ = {isa = PBXBuildFile; fileRef = 27D7FE5523FDFC780052A2F6 /* OaklandDepartments.json */; };
 		27E6605923F2CCE20051B3CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E6605823F2CCE20051B3CF /* AppDelegate.swift */; };
 		27E6605B23F2CCE20051B3CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E6605A23F2CCE20051B3CF /* SceneDelegate.swift */; };
 		27E6606023F2CCE30051B3CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27E6605E23F2CCE30051B3CF /* Main.storyboard */; };
@@ -52,6 +53,7 @@
 		27D7FE4B23FB8CA30052A2F6 /* BudgetResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetResultsViewController.swift; sourceTree = "<group>"; };
 		27D7FE4D23FB8CCD0052A2F6 /* DepartmentAllocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentAllocation.swift; sourceTree = "<group>"; };
 		27D7FE4F23FB8F7D0052A2F6 /* DepartmentAllocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentAllocationCell.swift; sourceTree = "<group>"; };
+		27D7FE5523FDFC780052A2F6 /* OaklandDepartments.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = OaklandDepartments.json; sourceTree = "<group>"; };
 		27E6605523F2CCE20051B3CF /* MoralBudget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoralBudget.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27E6605823F2CCE20051B3CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27E6605A23F2CCE20051B3CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				27E6605A23F2CCE20051B3CF /* SceneDelegate.swift */,
 				27E6606123F2CCE40051B3CF /* Assets.xcassets */,
 				27E6606323F2CCE40051B3CF /* LaunchScreen.storyboard */,
+				27D7FE5523FDFC780052A2F6 /* OaklandDepartments.json */,
 				27E6606623F2CCE40051B3CF /* Info.plist */,
 			);
 			path = MoralBudget;
@@ -260,6 +263,7 @@
 				27E6606523F2CCE40051B3CF /* LaunchScreen.storyboard in Resources */,
 				27E6606223F2CCE40051B3CF /* Assets.xcassets in Resources */,
 				27D7FE4A23FB8C8D0052A2F6 /* BudgetResults.storyboard in Resources */,
+				27D7FE5623FDFC790052A2F6 /* OaklandDepartments.json in Resources */,
 				27E6606023F2CCE30051B3CF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

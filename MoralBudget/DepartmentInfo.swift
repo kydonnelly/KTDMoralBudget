@@ -13,3 +13,7 @@ struct DepartmentInfo {
     let caption: String
     let details: String
 }
+
+extension DepartmentInfo : Decodable {
+    
+}
