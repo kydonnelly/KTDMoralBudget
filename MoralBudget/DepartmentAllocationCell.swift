@@ -8,27 +8,48 @@
 
 import UIKit
 
-public class DepartmentAllocationCell : UITableViewCell {
+public class DepartmentAllocationCell : UICollectionViewCell {
     
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var detailLabel: UILabel!
+    
+    @IBOutlet var changeLabel: UILabel!
+    @IBOutlet var upArrow: UIImageView!
+    @IBOutlet var downArrow: UIImageView!
+    @IBOutlet var equalArrow: UIImageView!
+    
+    @IBOutlet var cardView: UIView!
+    
+    public override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        self.cardView.layer.backgroundColor = UIColor(white: 0.97, alpha: 1.0).cgColor
+        layer.shouldRasterize = true
+        layer.rasterizationScale = UIScreen.main.scale
+    }
     
     func setup(departmentInfo: DepartmentInfo, myAllocation: Double, cityAllocation: Double) {
         let delta = Int(round(abs(myAllocation - cityAllocation) / cityAllocation * 100))
         
         if (delta == 0) {
-            self.titleLabel.text = "\(departmentInfo.name): No Change"
+            self.titleLabel.text = departmentInfo.name
             self.detailLabel.text = "\(round(cityAllocation * 1000.0) / 10.0)%"
+            
+            self.changeLabel.text = "No Change"
+            self.equalArrow.isHidden = false
+            self.downArrow.isHidden = true
+            self.upArrow.isHidden = true
         } else {
-            let direction = myAllocation > cityAllocation ? "More" : "Less"
-            self.titleLabel.text = "\(departmentInfo.name): \(delta)% \(direction)"
+            self.titleLabel.text = departmentInfo.name
             self.detailLabel.text = "\(round(cityAllocation * 1000.0) / 10.0)% -> \(round(myAllocation * 1000.0) / 10.0)%"
+            
+            let isMore = myAllocation > cityAllocation
+            let changeDescription = isMore ? "MORE" : "LESS"
+            self.changeLabel.text = "\(delta)%\n\(changeDescription)"
+            self.equalArrow.isHidden = true
+            self.downArrow.isHidden = isMore
+            self.upArrow.isHidden = !isMore
         }
-        
-        // scale from green at 50% to red at -50%
-        self.detailLabel.textColor = UIColor(red: 0.2 + CGFloat(cityAllocation - myAllocation) * 4,
-                                             green: 0.2 + CGFloat(myAllocation - cityAllocation) * 4,
-                                             blue: 0.2, alpha: 1)
     }
     
 }

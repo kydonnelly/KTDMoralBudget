@@ -10,7 +10,7 @@ import UIKit
 
 class BudgetResultsViewController : UIViewController {
     
-    @IBOutlet var tableView: UITableView!
+    @IBOutlet var collectionView: UICollectionView!
     
     // parallel arrays?
     private var departments: [DepartmentInfo] = []
@@ -24,24 +24,24 @@ class BudgetResultsViewController : UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.tableView.reloadData()
+        self.collectionView.reloadData()
     }
     
 }
 
-extension BudgetResultsViewController : UITableViewDataSource {
+extension BudgetResultsViewController : UICollectionViewDataSource {
     
-    func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.departments.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "AllocationCell", for: indexPath) as? DepartmentAllocationCell else {
-            preconditionFailure("Missing expected table cell type!")
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AllocationCell", for: indexPath) as? DepartmentAllocationCell else {
+            preconditionFailure("Missing expected cell type!")
         }
         
         let myAllocation = self.myAllocations[indexPath.row]
@@ -53,10 +53,10 @@ extension BudgetResultsViewController : UITableViewDataSource {
     
 }
 
-extension BudgetResultsViewController : UITableViewDelegate {
+extension BudgetResultsViewController : UICollectionViewDelegate {
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
         
         let department = self.departments[indexPath.row]
         let alert = UIAlertController(title: "\(department.name) details", message: department.details, preferredStyle: .alert)
@@ -64,6 +64,15 @@ extension BudgetResultsViewController : UITableViewDelegate {
             self?.dismiss(animated: true, completion: nil)
         }))
         self.present(alert, animated: true, completion: nil)
+    }
+    
+}
+
+extension BudgetResultsViewController : UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let collectionViewSize = collectionView.bounds.size.width
+        return CGSize(width: collectionViewSize * 0.5, height: collectionViewSize * 0.5)
     }
     
 }
