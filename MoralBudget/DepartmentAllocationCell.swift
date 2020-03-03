@@ -12,11 +12,12 @@ public class DepartmentAllocationCell : UICollectionViewCell {
     
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var detailLabel: UILabel!
+    @IBOutlet var iconImageViews: [UIImageView]!
     
     @IBOutlet var changeLabel: UILabel!
-    @IBOutlet var upArrow: UIImageView!
-    @IBOutlet var downArrow: UIImageView!
-    @IBOutlet var equalArrow: UIImageView!
+    @IBOutlet var upView: UIView!
+    @IBOutlet var downView: UIView!
+    @IBOutlet var equalView: UIView!
     
     @IBOutlet var cardView: UIView!
     
@@ -31,14 +32,18 @@ public class DepartmentAllocationCell : UICollectionViewCell {
     func setup(departmentInfo: DepartmentInfo, myAllocation: Double, cityAllocation: Double) {
         let delta = Int(round(abs(myAllocation - cityAllocation) / cityAllocation * 100))
         
+        for iconImageView in self.iconImageViews {
+            iconImageView.image = UIImage(named: departmentInfo.iconName)
+        }
+        
         if (delta == 0) {
             self.titleLabel.text = departmentInfo.name
             self.detailLabel.text = "\(round(cityAllocation * 1000.0) / 10.0)%"
             
             self.changeLabel.text = "No Change"
-            self.equalArrow.isHidden = false
-            self.downArrow.isHidden = true
-            self.upArrow.isHidden = true
+            self.equalView.isHidden = false
+            self.downView.isHidden = true
+            self.upView.isHidden = true
         } else {
             self.titleLabel.text = departmentInfo.name
             self.detailLabel.text = "\(round(cityAllocation * 1000.0) / 10.0)% -> \(round(myAllocation * 1000.0) / 10.0)%"
@@ -46,9 +51,9 @@ public class DepartmentAllocationCell : UICollectionViewCell {
             let isMore = myAllocation > cityAllocation
             let changeDescription = isMore ? "MORE" : "LESS"
             self.changeLabel.text = "\(delta)%\n\(changeDescription)"
-            self.equalArrow.isHidden = true
-            self.downArrow.isHidden = isMore
-            self.upArrow.isHidden = !isMore
+            self.equalView.isHidden = true
+            self.downView.isHidden = isMore
+            self.upView.isHidden = !isMore
         }
     }
     

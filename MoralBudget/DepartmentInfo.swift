@@ -13,6 +13,8 @@ struct DepartmentInfo {
     let caption: String
     let details: String
     let allocation: Double
+    
+    let iconName: String
 }
 
 extension DepartmentInfo : Decodable { }
