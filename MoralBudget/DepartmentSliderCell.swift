@@ -29,8 +29,7 @@ public class DepartmentSliderCell : UITableViewCell {
         self.titleLabel.text = title
         self.subtitleLabel.text = subtitle
         
-        self.sliderView.value = Float(initialValue)
-        self.update(value: initialValue)
+        self.refresh(value: initialValue)
         
         self.updateBlock = updateBlock
         self.touchUpBlock = touchUpBlock
@@ -46,8 +45,13 @@ public class DepartmentSliderCell : UITableViewCell {
         self.touchUpBlock?()
     }
     
-    private func update(value: Double) {
+    private func refresh(value: Double) {
+        self.sliderView.value = Float(value)
         self.percentageField.text = "\(round(value * 1000) / 10)"
+    }
+    
+    private func update(value: Double) {
+        self.refresh(value: value)
         self.updateBlock?(value)
     }
     
