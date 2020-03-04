@@ -15,6 +15,7 @@ public class DepartmentSliderCell : UITableViewCell {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var subtitleLabel: UILabel!
     
+    @IBOutlet var lockButton: UIButton!
     @IBOutlet var percentageField: UITextField!
     
     @IBOutlet var expandedTouchView: UIView!
@@ -25,12 +26,17 @@ public class DepartmentSliderCell : UITableViewCell {
     public typealias TouchUpBlock = (() -> Void)
     private var touchUpBlock: TouchUpBlock? = nil
     
-    func setup(title: String, subtitle: String, initialValue: Double, updateBlock: UpdateBlock? = nil, touchUpBlock: TouchUpBlock? = nil) {
+    public typealias LockBlock = ((Bool) -> Void)
+    private var lockBlock: LockBlock? = nil
+    
+    func setup(title: String, subtitle: String, initialValue: Double, isLocked: Bool, updateBlock: UpdateBlock? = nil, lockBlock: LockBlock? = nil, touchUpBlock: TouchUpBlock? = nil) {
         self.titleLabel.text = title
         self.subtitleLabel.text = subtitle
         
         self.refresh(value: initialValue)
+        self.lockButton.isSelected = isLocked
         
+        self.lockBlock = lockBlock
         self.updateBlock = updateBlock
         self.touchUpBlock = touchUpBlock
     }
@@ -43,6 +49,12 @@ public class DepartmentSliderCell : UITableViewCell {
     
     @IBAction func sliderFinishedSliding(_ slider: UISlider) {
         self.touchUpBlock?()
+    }
+    
+    @IBAction func didTapLockButton(_ button: UIButton) {
+        let isLocked = !button.isSelected
+        
+        self.lockBlock?(isLocked)
     }
     
     private func refresh(value: Double) {

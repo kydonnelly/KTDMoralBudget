@@ -52,6 +52,19 @@
                                                     <rect key="frame" x="232.5" y="0.0" width="181.5" height="64"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </view>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ma-Ap-DJc">
+                                                    <rect key="frame" x="302" y="5" width="24" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="ACJ-4I-WME"/>
+                                                        <constraint firstAttribute="width" constant="24" id="ilR-EW-QTR"/>
+                                                    </constraints>
+                                                    <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <state key="normal" image="lock.open" catalog="system"/>
+                                                    <state key="selected" image="lock" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="didTapLockButton:" destination="i5X-Nx-ldm" eventType="touchUpInside" id="5oJ-JJ-qzX"/>
+                                                    </connections>
+                                                </button>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="20" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Zd-Ed-BKc">
                                                     <rect key="frame" x="334" y="0.0" width="48" height="34"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -76,6 +89,7 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="3Ma-Ap-DJc" firstAttribute="centerY" secondItem="6Zd-Ed-BKc" secondAttribute="centerY" id="1nq-fn-vmR"/>
                                                 <constraint firstItem="yUO-Xs-VpZ" firstAttribute="width" secondItem="RdL-tX-O5R" secondAttribute="width" id="2Fv-Xp-2U2"/>
                                                 <constraint firstItem="6Zd-Ed-BKc" firstAttribute="top" secondItem="O3W-6l-XQO" secondAttribute="top" id="6gu-ms-KdH"/>
                                                 <constraint firstAttribute="trailing" secondItem="O3W-6l-XQO" secondAttribute="trailing" id="7t2-70-jsl"/>
@@ -94,6 +108,7 @@
                                                 <constraint firstItem="mxd-53-IdD" firstAttribute="centerY" secondItem="6Zd-Ed-BKc" secondAttribute="centerY" id="joj-lO-bjf"/>
                                                 <constraint firstItem="2bV-jb-lID" firstAttribute="leading" secondItem="D5a-u0-C2e" secondAttribute="leading" id="kaT-hp-URK"/>
                                                 <constraint firstItem="O3W-6l-XQO" firstAttribute="bottom" secondItem="EBi-Um-qSB" secondAttribute="bottom" id="l73-1T-sz6"/>
+                                                <constraint firstItem="6Zd-Ed-BKc" firstAttribute="leading" secondItem="3Ma-Ap-DJc" secondAttribute="trailing" constant="8" id="rZu-Vg-3hw"/>
                                                 <constraint firstItem="2bV-jb-lID" firstAttribute="top" secondItem="RdL-tX-O5R" secondAttribute="top" id="vHL-PF-Yj1"/>
                                                 <constraint firstItem="mxd-53-IdD" firstAttribute="leading" secondItem="6Zd-Ed-BKc" secondAttribute="trailing" constant="2" id="wNN-Vb-Jwt"/>
                                                 <constraint firstAttribute="trailing" secondItem="EBi-Um-qSB" secondAttribute="trailing" constant="16" id="wg5-tJ-j3Z"/>
@@ -101,6 +116,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="expandedTouchView" destination="O3W-6l-XQO" id="q9t-IF-imU"/>
+                                            <outlet property="lockButton" destination="3Ma-Ap-DJc" id="ex9-1I-927"/>
                                             <outlet property="percentageField" destination="6Zd-Ed-BKc" id="VZC-wu-Hjc"/>
                                             <outlet property="sliderView" destination="EBi-Um-qSB" id="apR-3x-mQW"/>
                                             <outlet property="subtitleLabel" destination="yUO-Xs-VpZ" id="8zT-pa-nyi"/>
@@ -206,4 +222,8 @@
             <point key="canvasLocation" x="139" y="130"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="lock" catalog="system" width="64" height="64"/>
+        <image name="lock.open" catalog="system" width="64" height="56"/>
+    </resources>
 </document>

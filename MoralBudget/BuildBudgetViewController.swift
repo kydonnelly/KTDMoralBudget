@@ -21,10 +21,12 @@ class BuildBudgetViewController : UIViewController {
     // parallel arrays
     private var departments: [DepartmentInfo] = []
     private var allocations: [Double] = []
+    private var locks: [Bool] = []
     
     func setup(departments: [DepartmentInfo]) {
         self.departments = departments
         self.allocations = Array(repeating: (1.0 / Double(departments.count)), count: departments.count)
+        self.locks = Array(repeating: false, count: departments.count)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -57,7 +59,9 @@ extension BuildBudgetViewController : UITableViewDataSource {
         
         let department = self.departments[indexPath.row]
         let allocation = self.allocations[indexPath.row]
-        cell.setup(title: department.name, subtitle: department.caption, initialValue: allocation, updateBlock: { [weak self] (value) in
+        let isLocked = self.locks[indexPath.row]
+        
+        cell.setup(title: department.name, subtitle: department.caption, initialValue: allocation, isLocked: isLocked, updateBlock: { [weak self] (value) in
             guard let strongSelf = self else {
                 return
             }
@@ -69,7 +73,28 @@ extension BuildBudgetViewController : UITableViewDataSource {
                 strongSelf.normalizePercentages()
                 strongSelf.refreshData()
             }
-        }, touchUpBlock: { [weak self] in
+            }, lockBlock: { [weak self] (isLocked) in
+                guard let self = self else {
+                    return
+                }
+                
+                if isLocked {
+                    let current = self.currentLockedPercentage()
+                    let attempt = self.allocations[indexPath.row]
+                    
+                    guard current + attempt <= 1.0 else {
+                        let alert = UIAlertController(title: "Cannot lock \(department.name)", message: "You already have \(round(current * 1000) / 10.0)% locked. Locking another \(round(attempt * 1000) / 10.0)% would exceed 100% which is not supported.", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "okay", style: .default, handler: { [weak self] (action) in
+                            self?.dismiss(animated: true, completion: nil)
+                        }))
+                        self.present(alert, animated: true, completion: nil)
+                        return
+                    }
+                }
+
+                self.locks[indexPath.row] = isLocked
+                self.refreshData()
+            }, touchUpBlock: { [weak self] in
             guard let strongSelf = self else {
                 return
             }
@@ -113,6 +138,16 @@ extension BuildBudgetViewController {
         return self.allocations.reduce(0, +)
     }
     
+    fileprivate func currentLockedPercentage() -> Double {
+        return self.allocations.enumerated().reduce(0.0) { (sum, iter) -> Double in
+            if self.locks[iter.offset] {
+                return sum + iter.element
+            } else {
+                return sum
+            }
+        }
+    }
+    
     private func refreshPercentageLabel() {
         let totalPercentage = self.currentTotalPercentage()
         let visiblePercentage = round(totalPercentage * 1000.0) / 10.0
@@ -141,14 +176,18 @@ extension BuildBudgetViewController {
     
     fileprivate func normalizePercentages() {
         let totalPercentage = self.currentTotalPercentage()
-        guard totalPercentage > 0 else {
-            return
+        let lockedPercentage = min(1.0, self.currentLockedPercentage())
+        let unlockedPercentage = totalPercentage - lockedPercentage
+        
+        var ratio = 0.0
+        if unlockedPercentage != 0 {
+            ratio = (1.0 - lockedPercentage) / unlockedPercentage
         }
         
-        let ratio = 1.0 / totalPercentage
-        
         for (index, percentage) in self.allocations.enumerated() {
-            self.allocations[index] = percentage * ratio
+            if !self.locks[index] {
+                self.allocations[index] = percentage * ratio
+            }
         }
     }
     
