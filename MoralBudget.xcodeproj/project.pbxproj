@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2710DCC5240F264700365E87 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710DCC4240F264700365E87 /* UIColor+Hex.swift */; };
 		27D7FE3C23F8C68E0052A2F6 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D7FE3B23F8C68E0052A2F6 /* RootViewController.swift */; };
 		27D7FE3E23F8C6CA0052A2F6 /* BuildBudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D7FE3D23F8C6CA0052A2F6 /* BuildBudgetViewController.swift */; };
 		27D7FE4023F8C6EA0052A2F6 /* BuildBudget.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27D7FE3F23F8C6EA0052A2F6 /* BuildBudget.storyboard */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2710DCC4240F264700365E87 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		27D7FE3B23F8C68E0052A2F6 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		27D7FE3D23F8C6CA0052A2F6 /* BuildBudgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildBudgetViewController.swift; sourceTree = "<group>"; };
 		27D7FE3F23F8C6EA0052A2F6 /* BuildBudget.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BuildBudget.storyboard; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				27E6605E23F2CCE30051B3CF /* Main.storyboard */,
 				27D7FE3B23F8C68E0052A2F6 /* RootViewController.swift */,
 				27E6605A23F2CCE20051B3CF /* SceneDelegate.swift */,
+				2710DCC4240F264700365E87 /* UIColor+Hex.swift */,
 				27E6606123F2CCE40051B3CF /* Assets.xcassets */,
 				27E6606323F2CCE40051B3CF /* LaunchScreen.storyboard */,
 				27D7FE5523FDFC780052A2F6 /* OaklandDepartments.json */,
@@ -289,6 +292,7 @@
 				27D7FE3E23F8C6CA0052A2F6 /* BuildBudgetViewController.swift in Sources */,
 				27D7FE4C23FB8CA30052A2F6 /* BudgetResultsViewController.swift in Sources */,
 				27D7FE4423F8C7B40052A2F6 /* DepartmentSliderCell.swift in Sources */,
+				2710DCC5240F264700365E87 /* UIColor+Hex.swift in Sources */,
 				27D7FE4823F8E4FF0052A2F6 /* DepartmentInfo.swift in Sources */,
 				27D7FE5023FB8F7D0052A2F6 /* DepartmentAllocationCell.swift in Sources */,
 				27E6605923F2CCE20051B3CF /* AppDelegate.swift in Sources */,

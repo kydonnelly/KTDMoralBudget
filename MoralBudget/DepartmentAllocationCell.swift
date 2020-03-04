@@ -24,7 +24,6 @@ public class DepartmentAllocationCell : UICollectionViewCell {
     public override func awakeFromNib() {
         super.awakeFromNib()
         
-        self.cardView.layer.backgroundColor = UIColor(white: 0.97, alpha: 1.0).cgColor
         layer.shouldRasterize = true
         layer.rasterizationScale = UIScreen.main.scale
     }
@@ -55,6 +54,8 @@ public class DepartmentAllocationCell : UICollectionViewCell {
             self.downView.isHidden = isMore
             self.upView.isHidden = !isMore
         }
+        
+        self.cardView.layer.backgroundColor = UIColor(hexString: departmentInfo.hexColor, alpha: 1).cgColor
     }
     
 }

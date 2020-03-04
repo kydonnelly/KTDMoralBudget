@@ -15,6 +15,7 @@ struct DepartmentInfo {
     let allocation: Double
     
     let iconName: String
+    let hexColor: String
 }
 
 extension DepartmentInfo : Decodable { }
