@@ -100,6 +100,7 @@ extension DepartmentSliderCell : UITextFieldDelegate {
         
         let value = inputValue / 100.0
         self.update(value: value)
+        self.touchUpBlock?()
     }
     
     public func textFieldDidEndEditing(_ textField: UITextField) {

@@ -14,9 +14,11 @@ class BuildBudgetViewController : UIViewController {
     @IBOutlet var totalPercentLabel: UILabel!
     
     @IBOutlet var headerView: UIView!
+    @IBOutlet var settingsView: UIView!
     
     var shouldNormalize: Bool = false
     var shouldAutoSort: Bool = false
+    var shouldAutoLock: Bool = false
     
     // parallel arrays
     private var departments: [DepartmentInfo] = []
@@ -73,31 +75,19 @@ extension BuildBudgetViewController : UITableViewDataSource {
                 strongSelf.normalizePercentages()
                 strongSelf.refreshData()
             }
-            }, lockBlock: { [weak self] (isLocked) in
-                guard let self = self else {
-                    return false
-                }
-                
-                if isLocked {
-                    let current = self.currentLockedPercentage()
-                    let attempt = self.allocations[indexPath.row]
-                    
-                    guard current + attempt <= 1.0 else {
-                        let alert = UIAlertController(title: "Cannot lock \(department.name)", message: "You already have \(round(current * 1000) / 10.0)% locked. Locking another \(round(attempt * 1000) / 10.0)% would exceed 100% which is not supported.", preferredStyle: .alert)
-                        alert.addAction(UIAlertAction(title: "okay", style: .default, handler: { [weak self] (action) in
-                            self?.dismiss(animated: true, completion: nil)
-                        }))
-                        self.present(alert, animated: true, completion: nil)
-                        return false
-                    }
-                }
-
-                self.locks[indexPath.row] = isLocked
-                
-                return true
-            }, touchUpBlock: { [weak self] in
+        }, lockBlock: { [weak self] (isLocked) in
+            guard let strongSelf = self else {
+                return false
+            }
+            
+            return strongSelf.lockIfPossible(index: indexPath.row, isLocked: isLocked, shouldShowPrompt: true)
+        }, touchUpBlock: { [weak self] in
             guard let strongSelf = self else {
                 return
+            }
+            
+            if strongSelf.shouldAutoLock {
+                _ = strongSelf.lockIfPossible(index: indexPath.row, isLocked: true, shouldShowPrompt: false)
             }
             
             if strongSelf.shouldAutoSort {
@@ -124,7 +114,7 @@ extension BuildBudgetViewController : UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 84
+        return 36
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -160,13 +150,25 @@ extension BuildBudgetViewController {
                                                    blue: 0.2, alpha: 1)
     }
     
+}
+
+extension BuildBudgetViewController {
+    
+    @IBAction func tappedSettingsButton() {
+        self.settingsView.isHidden = !self.settingsView.isHidden
+    }
+    
+}
+
+extension BuildBudgetViewController {
+    
     @IBAction func tappedPercentageButton() {
         self.normalizePercentages()
         
         self.refreshData()
     }
     
-    @IBAction func tappedLockSwitch(_ lockSwitch: UISwitch) {
+    @IBAction func tappedNormalizeSwitch(_ lockSwitch: UISwitch) {
         self.shouldNormalize = lockSwitch.isOn
         
         if self.shouldNormalize {
@@ -225,6 +227,37 @@ extension BuildBudgetViewController {
         })
     }
     
+}
+
+extension BuildBudgetViewController {
+    
+    @IBAction func tappedAutoLock(_ sortSwitch: UISwitch) {
+        self.shouldAutoLock = sortSwitch.isOn
+    }
+    
+    fileprivate func lockIfPossible(index: Int, isLocked: Bool, shouldShowPrompt: Bool) -> Bool {
+        if isLocked {
+            let current = self.currentLockedPercentage()
+            let attempt = self.allocations[index]
+            let department = self.departments[index]
+            
+            guard current + attempt <= 1.0 else {
+                if shouldShowPrompt {
+                    let alert = UIAlertController(title: "Cannot lock \(department.name)", message: "You already have \(round(current * 1000) / 10.0)% locked. Locking another \(round(attempt * 1000) / 10.0)% would exceed 100% which is not supported.", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "okay", style: .default, handler: { [weak self] (action) in
+                        self?.dismiss(animated: true, completion: nil)
+                    }))
+                    self.present(alert, animated: true, completion: nil)
+                }
+                
+                return false
+            }
+        }
+
+        self.locks[index] = isLocked
+        
+        return true
+    }
 }
 
 extension BuildBudgetViewController {
