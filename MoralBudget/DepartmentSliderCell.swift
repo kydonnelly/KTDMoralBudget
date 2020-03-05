@@ -108,7 +108,7 @@ extension DepartmentSliderCell : UITextFieldDelegate {
     }
     
     public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.submit(textField)
+        self.endEditing(true)
         return true
     }
     
