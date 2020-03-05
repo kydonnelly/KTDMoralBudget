@@ -163,16 +163,24 @@ extension BuildBudgetViewController {
 extension BuildBudgetViewController {
     
     @IBAction func tappedPercentageButton() {
-        self.normalizePercentages()
-        
-        self.refreshData()
+        self.normalizeTable()
     }
     
     @IBAction func tappedNormalizeSwitch(_ lockSwitch: UISwitch) {
         self.shouldNormalize = lockSwitch.isOn
         
         if self.shouldNormalize {
-            self.normalizePercentages()
+            self.normalizeTable()
+        }
+    }
+    
+    private func normalizeTable() {
+        self.normalizePercentages()
+        
+        if self.shouldAutoSort {
+            // this refreshes data after animation
+            self.sortDepartmentsByAllocation()
+        } else {
             self.refreshData()
         }
     }
