@@ -207,9 +207,11 @@ extension BuildBudgetViewController {
     private func sortDepartmentsByAllocation() {
         let sortedAllocations = self.allocations.enumerated().sorted { $0.element > $1.element }
         let departmentsCopy = self.departments
+        let locksCopy = self.locks
         
         self.allocations = sortedAllocations.map { $0.element }
         self.departments = sortedAllocations.map { departmentsCopy[$0.offset] }
+        self.locks = sortedAllocations.map { locksCopy[$0.offset] }
         
         self.tableView.performBatchUpdates({
             for (newIndex, oldInfo) in sortedAllocations.enumerated() {
