@@ -75,7 +75,7 @@ extension BuildBudgetViewController : UITableViewDataSource {
             }
             }, lockBlock: { [weak self] (isLocked) in
                 guard let self = self else {
-                    return
+                    return false
                 }
                 
                 if isLocked {
@@ -88,12 +88,13 @@ extension BuildBudgetViewController : UITableViewDataSource {
                             self?.dismiss(animated: true, completion: nil)
                         }))
                         self.present(alert, animated: true, completion: nil)
-                        return
+                        return false
                     }
                 }
 
                 self.locks[indexPath.row] = isLocked
-                self.refreshData()
+                
+                return true
             }, touchUpBlock: { [weak self] in
             guard let strongSelf = self else {
                 return

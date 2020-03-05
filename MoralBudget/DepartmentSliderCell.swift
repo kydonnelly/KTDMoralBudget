@@ -26,7 +26,7 @@ public class DepartmentSliderCell : UITableViewCell {
     public typealias TouchUpBlock = (() -> Void)
     private var touchUpBlock: TouchUpBlock? = nil
     
-    public typealias LockBlock = ((Bool) -> Void)
+    public typealias LockBlock = ((Bool) -> Bool)
     private var lockBlock: LockBlock? = nil
     
     func setup(title: String, subtitle: String, initialValue: Double, isLocked: Bool, updateBlock: UpdateBlock? = nil, lockBlock: LockBlock? = nil, touchUpBlock: TouchUpBlock? = nil) {
@@ -34,7 +34,7 @@ public class DepartmentSliderCell : UITableViewCell {
         self.subtitleLabel.text = subtitle
         
         self.refresh(value: initialValue)
-        self.lockButton.isSelected = isLocked
+        self.refresh(isLocked: isLocked)
         
         self.lockBlock = lockBlock
         self.updateBlock = updateBlock
@@ -54,7 +54,19 @@ public class DepartmentSliderCell : UITableViewCell {
     @IBAction func didTapLockButton(_ button: UIButton) {
         let isLocked = !button.isSelected
         
-        self.lockBlock?(isLocked)
+        if self.lockBlock?(isLocked) == true {
+            self.refresh(isLocked: isLocked)
+        }
+    }
+    
+    private func refresh(isLocked: Bool) {
+        self.lockButton.isSelected = isLocked
+        
+        if isLocked {
+            self.lockButton.tintColor = UIColor(hexValue: 0x32A632, alpha: 1.0)
+        } else {
+            self.lockButton.tintColor = UIColor(white: 0.33, alpha: 0.2)
+        }
     }
     
     private func refresh(value: Double) {

@@ -53,20 +53,23 @@
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </view>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ma-Ap-DJc">
-                                                    <rect key="frame" x="302" y="5" width="24" height="24"/>
+                                                    <rect key="frame" x="294" y="5" width="24" height="24"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="24" id="ACJ-4I-WME"/>
                                                         <constraint firstAttribute="width" constant="24" id="ilR-EW-QTR"/>
                                                     </constraints>
-                                                    <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" white="0.33000000000000002" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <state key="normal" image="lock.open" catalog="system"/>
                                                     <state key="selected" image="lock" catalog="system"/>
                                                     <connections>
                                                         <action selector="didTapLockButton:" destination="i5X-Nx-ldm" eventType="touchUpInside" id="5oJ-JJ-qzX"/>
                                                     </connections>
                                                 </button>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="20" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Zd-Ed-BKc">
-                                                    <rect key="frame" x="334" y="0.0" width="48" height="34"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="420.69%" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Zd-Ed-BKc">
+                                                    <rect key="frame" x="326" y="0.0" width="56" height="34"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="56" id="B02-KC-eSZ"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="next"/>
                                                     <connections>
