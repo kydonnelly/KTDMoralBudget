@@ -63,7 +63,7 @@ extension BuildBudgetViewController : UITableViewDataSource {
         let allocation = self.allocations[indexPath.row]
         let isLocked = self.locks[indexPath.row]
         
-        cell.setup(title: department.name, subtitle: department.caption, initialValue: allocation, isLocked: isLocked, updateBlock: { [weak self] (value) in
+        cell.setup(departmentInfo: department, initialValue: allocation, isLocked: isLocked, updateBlock: { [weak self] (value) in
             guard let strongSelf = self else {
                 return
             }

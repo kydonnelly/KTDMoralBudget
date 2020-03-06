@@ -11,14 +11,16 @@ import UIKit
 public class DepartmentSliderCell : UITableViewCell {
     
     @IBOutlet var sliderView: UISlider!
+    @IBOutlet var expandedTouchView: UIView!
 
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var subtitleLabel: UILabel!
+    @IBOutlet var iconImageView: UIImageView!
     
     @IBOutlet var lockButton: UIButton!
     @IBOutlet var percentageField: UITextField!
     
-    @IBOutlet var expandedTouchView: UIView!
+    @IBOutlet var gradientView: LinearGradientView!
     
     public typealias UpdateBlock = ((_ value: Double) -> Void)
     private var updateBlock: UpdateBlock? = nil
@@ -29,9 +31,17 @@ public class DepartmentSliderCell : UITableViewCell {
     public typealias LockBlock = ((Bool) -> Bool)
     private var lockBlock: LockBlock? = nil
     
-    func setup(title: String, subtitle: String, initialValue: Double, isLocked: Bool, updateBlock: UpdateBlock? = nil, lockBlock: LockBlock? = nil, touchUpBlock: TouchUpBlock? = nil) {
-        self.titleLabel.text = title
-        self.subtitleLabel.text = subtitle
+    func setup(departmentInfo: DepartmentInfo, initialValue: Double, isLocked: Bool, updateBlock: UpdateBlock? = nil, lockBlock: LockBlock? = nil, touchUpBlock: TouchUpBlock? = nil) {
+        self.titleLabel.text = departmentInfo.name
+        self.subtitleLabel.text = departmentInfo.caption
+        
+        self.iconImageView.image = UIImage(named: departmentInfo.iconName)
+        self.sliderView.tintColor = departmentInfo.iconColor
+        self.gradientView.update(colors: [departmentInfo.iconColor,
+                                          UIColor(hexString: departmentInfo.hexColor, alpha: 0.8),
+                                          UIColor(hexString: departmentInfo.hexColor, alpha: 0.2),
+                                          UIColor(hexString: departmentInfo.hexColor, alpha: 0.0)],
+                                 direction: .horizontal)
         
         self.refresh(value: initialValue)
         self.refresh(isLocked: isLocked)

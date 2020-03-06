@@ -55,7 +55,7 @@ public class DepartmentAllocationCell : UICollectionViewCell {
             self.upView.isHidden = !isMore
         }
         
-        self.cardView.layer.backgroundColor = UIColor(hexString: departmentInfo.hexColor, alpha: 1).cgColor
+        self.cardView.layer.backgroundColor = departmentInfo.iconColor.cgColor
     }
     
 }

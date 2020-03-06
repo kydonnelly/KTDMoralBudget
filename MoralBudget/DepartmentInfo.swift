@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct DepartmentInfo {
     let name: String
@@ -19,3 +20,11 @@ struct DepartmentInfo {
 }
 
 extension DepartmentInfo : Decodable { }
+
+extension DepartmentInfo {
+    
+    var iconColor: UIColor {
+        return UIColor(hexString: self.hexColor, alpha: 1)
+    }
+    
+}
