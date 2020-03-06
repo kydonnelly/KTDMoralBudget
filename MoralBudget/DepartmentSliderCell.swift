@@ -113,7 +113,20 @@ extension DepartmentSliderCell : UITextFieldDelegate {
         self.touchUpBlock?()
     }
     
+    public func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        // Show the original value, but don't make user backspace through it
+        textField.placeholder = textField.text
+        textField.text = ""
+        
+        return true
+    }
+    
     public func textFieldDidEndEditing(_ textField: UITextField) {
+        // Revert change from textFieldShouldBeginEditing
+        if textField.text == "" {
+            textField.text = textField.placeholder
+        }
+        
         self.submit(textField)
     }
     
