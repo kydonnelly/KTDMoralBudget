@@ -27,7 +27,7 @@ class BuildBudgetViewController : UIViewController {
     
     func setup(departments: [DepartmentInfo]) {
         self.departments = departments
-        self.allocations = Array(repeating: (1.0 / Double(departments.count)), count: departments.count)
+        self.allocations = departments.map { $0.allocation }
         self.locks = Array(repeating: false, count: departments.count)
     }
     
