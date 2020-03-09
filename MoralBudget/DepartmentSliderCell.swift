@@ -14,7 +14,6 @@ public class DepartmentSliderCell : UITableViewCell {
     @IBOutlet var expandedTouchView: UIView!
 
     @IBOutlet var titleLabel: UILabel!
-    @IBOutlet var subtitleLabel: UILabel!
     @IBOutlet var iconImageView: UIImageView!
     
     @IBOutlet var lockButton: UIButton!
@@ -33,7 +32,6 @@ public class DepartmentSliderCell : UITableViewCell {
     
     func setup(departmentInfo: DepartmentInfo, initialValue: Double, isLocked: Bool, updateBlock: UpdateBlock? = nil, lockBlock: LockBlock? = nil, touchUpBlock: TouchUpBlock? = nil) {
         self.titleLabel.text = departmentInfo.name
-        self.subtitleLabel.text = departmentInfo.caption
         
         self.iconImageView.image = UIImage(named: departmentInfo.iconName)
         self.sliderView.tintColor = departmentInfo.iconColor
