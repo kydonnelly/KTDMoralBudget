@@ -11,11 +11,6 @@ import UIKit
 class RootViewController : UIViewController {
     
     @IBAction func pressedStartButton() {
-        let buildBudgetStoryboard = UIStoryboard(name: "BuildBudget", bundle: .main)
-        guard let buildBudgetVC = buildBudgetStoryboard.instantiateInitialViewController() as? BuildBudgetViewController else {
-            return
-        }
-        
         guard let jsonPath = Bundle.main.path(forResource: "OaklandDepartments", ofType: "json") else {
             return
         }
@@ -26,9 +21,14 @@ class RootViewController : UIViewController {
             return
         }
         
-        buildBudgetVC.setup(departments: jsonInfos)
+        let budgetMapStoryboard = UIStoryboard(name: "BudgetMap", bundle: .main)
+        guard let budgetMapVC = budgetMapStoryboard.instantiateInitialViewController() as? BudgetMapViewController else {
+            return
+        }
         
-        self.navigationController?.pushViewController(buildBudgetVC, animated: true)
+        budgetMapVC.setup(departments: jsonInfos)
+        
+        self.navigationController?.pushViewController(budgetMapVC, animated: true)
     }
     
 }
