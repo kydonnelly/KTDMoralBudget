@@ -12,6 +12,7 @@ import UIKit
     
     func didBeginDragging(coins: [UIImageView], touch: UITouch, view: UIView)
     func didContinueDragging(touch: UITouch, view: UIView)
+    func didCancelDragging(touch: UITouch, view: UIView)
     func didEndDragging(touch: UITouch, view: UIView)
     
 }

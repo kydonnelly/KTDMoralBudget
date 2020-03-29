@@ -82,4 +82,13 @@ class CoinStackView : UIView {
         self.dragDelegate.didEndDragging(touch: touch, view: self)
     }
     
+    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesCancelled(touches, with: event)
+        guard let touch = touches.first else {
+            return
+        }
+        
+        self.dragDelegate.didCancelDragging(touch: touch, view: self)
+    }
+    
 }

@@ -14,11 +14,19 @@ class BudgetMapCell : UICollectionViewCell {
     @IBOutlet var iconImageView: UIImageView!
     @IBOutlet var coinStackView: CoinStackView!
     
-    public func setup(departmentInfo: DepartmentInfo, allocation: Double) {
+    public func setup(departmentInfo: DepartmentInfo, allocation: Double, offset: Double) {
         self.coinStackView.setup(numCoins: Int(allocation * 50.0))
-        self.percentageLabel.text = "\(Int(allocation * 100.0))%"
+        self.percentageLabel.text = "\(Int((allocation + offset) * 100.0))%"
         self.iconImageView.image = UIImage(named: departmentInfo.iconName)
         self.contentView.backgroundColor = departmentInfo.iconColor
+        
+        if offset > 0.0 {
+            self.percentageLabel.textColor = .green
+        } else if offset < 0.0 {
+            self.percentageLabel.textColor = .red
+        } else {
+            self.percentageLabel.textColor = .black
+        }
     }
     
 }
