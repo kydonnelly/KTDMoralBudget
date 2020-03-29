@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Budget Map View Controller-->
+        <!--BudgetMapViewController-->
         <scene sceneID="9jg-hB-tND">
             <objects>
-                <viewController id="fdc-ol-hyK" customClass="BudgetMapViewController" customModule="MoralBudget" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fdc-ol-hyK" userLabel="BudgetMapViewController" customClass="BudgetMapViewController" customModule="MoralBudget" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qs0-Or-2in">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -63,6 +63,7 @@
                                                                             </constraints>
                                                                             <connections>
                                                                                 <outlet property="coinContainerView" destination="eHx-3u-CoY" id="MiM-gd-PDS"/>
+                                                                                <outlet property="dragDelegate" destination="fdc-ol-hyK" id="jLF-S4-2g1"/>
                                                                             </connections>
                                                                         </view>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="69%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G4e-T8-f4C">

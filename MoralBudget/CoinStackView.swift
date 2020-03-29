@@ -12,6 +12,7 @@ class CoinStackView : UIView {
     
     // Should have flexible width
     @IBOutlet var coinContainerView: UIView!
+    @IBOutlet weak var dragDelegate: CoinsDraggableProtocol!
     
     var coinSubviews: [UIImageView] = []
     static let coinImage: UIImage = UIImage(named: "coin")!
@@ -44,6 +45,41 @@ class CoinStackView : UIView {
         if let lastCoin = self.coinSubviews.last {
             self.coinContainerView.addConstraint(lastCoin.topAnchor.constraint(greaterThanOrEqualTo: self.coinContainerView.topAnchor))
         }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        guard let touch = touches.first else {
+            return
+        }
+        
+        let touchLocation = touch.location(in: self)
+        let touchedCoins = self.coinSubviews.enumerated().filter { $0.element.frame.contains(touchLocation) }
+        guard let touchedCoin = touchedCoins.last else {
+            return
+        }
+        
+        let touchedCoinIndex = touchedCoin.offset
+        let draggedCoins = [UIImageView](self.coinSubviews[touchedCoinIndex...])
+        self.dragDelegate.didBeginDragging(coins: draggedCoins, touch: touch, view: self)
+    }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesMoved(touches, with: event)
+        guard let touch = touches.first else {
+            return
+        }
+        
+        self.dragDelegate.didContinueDragging(touch: touch, view: self)
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesEnded(touches, with: event)
+        guard let touch = touches.first else {
+            return
+        }
+        
+        self.dragDelegate.didEndDragging(touch: touch, view: self)
     }
     
 }

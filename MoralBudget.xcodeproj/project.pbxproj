@@ -13,6 +13,8 @@
 		2710DD5C2421F1E500365E87 /* BudgetMapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710DD5B2421F1E500365E87 /* BudgetMapCell.swift */; };
 		2710DD5E2421F28800365E87 /* BudgetMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2710DD5D2421F28800365E87 /* BudgetMap.storyboard */; };
 		2725536D242FE90D009020EC /* CoinStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725536C242FE90D009020EC /* CoinStackView.swift */; };
+		2725536F24301A3B009020EC /* CoinsDraggableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725536E24301A3B009020EC /* CoinsDraggableProtocol.swift */; };
+		2725537124301C33009020EC /* UIImage+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725537024301C33009020EC /* UIImage+Snapshot.swift */; };
 		27D7FE3C23F8C68E0052A2F6 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D7FE3B23F8C68E0052A2F6 /* RootViewController.swift */; };
 		27D7FE3E23F8C6CA0052A2F6 /* BuildBudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D7FE3D23F8C6CA0052A2F6 /* BuildBudgetViewController.swift */; };
 		27D7FE4023F8C6EA0052A2F6 /* BuildBudget.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27D7FE3F23F8C6EA0052A2F6 /* BuildBudget.storyboard */; };
@@ -56,6 +58,8 @@
 		2710DD5B2421F1E500365E87 /* BudgetMapCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetMapCell.swift; sourceTree = "<group>"; };
 		2710DD5D2421F28800365E87 /* BudgetMap.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BudgetMap.storyboard; sourceTree = "<group>"; };
 		2725536C242FE90D009020EC /* CoinStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinStackView.swift; sourceTree = "<group>"; };
+		2725536E24301A3B009020EC /* CoinsDraggableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsDraggableProtocol.swift; sourceTree = "<group>"; };
+		2725537024301C33009020EC /* UIImage+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Snapshot.swift"; sourceTree = "<group>"; };
 		27D7FE3B23F8C68E0052A2F6 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		27D7FE3D23F8C6CA0052A2F6 /* BuildBudgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildBudgetViewController.swift; sourceTree = "<group>"; };
 		27D7FE3F23F8C6EA0052A2F6 /* BuildBudget.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BuildBudget.storyboard; sourceTree = "<group>"; };
@@ -143,6 +147,7 @@
 				27D7FE3F23F8C6EA0052A2F6 /* BuildBudget.storyboard */,
 				27D7FE3D23F8C6CA0052A2F6 /* BuildBudgetViewController.swift */,
 				2725536C242FE90D009020EC /* CoinStackView.swift */,
+				2725536E24301A3B009020EC /* CoinsDraggableProtocol.swift */,
 				27D7FE4723F8E4FF0052A2F6 /* DepartmentInfo.swift */,
 				27D7FE4F23FB8F7D0052A2F6 /* DepartmentAllocationCell.swift */,
 				27D7FE4323F8C7B40052A2F6 /* DepartmentSliderCell.swift */,
@@ -151,6 +156,7 @@
 				27D7FE3B23F8C68E0052A2F6 /* RootViewController.swift */,
 				27E6605A23F2CCE20051B3CF /* SceneDelegate.swift */,
 				2710DCC4240F264700365E87 /* UIColor+Hex.swift */,
+				2725537024301C33009020EC /* UIImage+Snapshot.swift */,
 				27E6606123F2CCE40051B3CF /* Assets.xcassets */,
 				27E6606323F2CCE40051B3CF /* LaunchScreen.storyboard */,
 				27D7FE5523FDFC780052A2F6 /* OaklandDepartments.json */,
@@ -355,6 +361,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2725536F24301A3B009020EC /* CoinsDraggableProtocol.swift in Sources */,
 				27D7FE3E23F8C6CA0052A2F6 /* BuildBudgetViewController.swift in Sources */,
 				27D7FE4C23FB8CA30052A2F6 /* BudgetResultsViewController.swift in Sources */,
 				2710DD5A2421F0A100365E87 /* BudgetMapViewController.swift in Sources */,
@@ -367,6 +374,7 @@
 				27D7FE5023FB8F7D0052A2F6 /* DepartmentAllocationCell.swift in Sources */,
 				27E6605923F2CCE20051B3CF /* AppDelegate.swift in Sources */,
 				27E6605B23F2CCE20051B3CF /* SceneDelegate.swift in Sources */,
+				2725537124301C33009020EC /* UIImage+Snapshot.swift in Sources */,
 				27D7FE3C23F8C68E0052A2F6 /* RootViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

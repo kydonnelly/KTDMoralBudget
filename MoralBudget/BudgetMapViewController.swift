@@ -13,6 +13,10 @@ class BudgetMapViewController : UIViewController {
     
     @IBOutlet var collectionView: TreeMapCollectionView!
     
+    private var draggingSnapshotOffset: CGPoint?
+    private var draggingSnapshotView: UIImageView?
+    private var draggingHoverCell: UICollectionViewCell?
+    
     // parallel arrays
     private var departments: [DepartmentInfo] = []
     private var allocations: [Double] = []
@@ -104,3 +108,58 @@ extension BudgetMapViewController {
     
 }
 
+extension BudgetMapViewController : CoinsDraggableProtocol {
+    
+    func didBeginDragging(coins: [UIImageView], touch: UITouch, view: UIView) {
+        let snapshot = UIImage.snapshot(views: coins)
+        let snapshotView = UIImageView(image: snapshot)
+        
+        self.view.addSubview(snapshotView)
+        let touchPoint = touch.location(in: self.view)
+        snapshotView.frame = self.view.convert(coins.frame.applying(.init(translationX: 2, y: -4)), from: view)
+        
+        self.draggingSnapshotView = snapshotView
+        self.draggingSnapshotOffset = CGPoint(x: touchPoint.x - snapshotView.frame.origin.x,
+                                              y: touchPoint.y - snapshotView.frame.origin.y)
+    }
+    
+    func didContinueDragging(touch: UITouch, view: UIView) {
+        guard let dragView = self.draggingSnapshotView, let dragOffset = self.draggingSnapshotOffset else {
+            return
+        }
+        
+        let touchPoint = touch.location(in: self.view)
+        let dragPoint = CGPoint(x: touchPoint.x - dragOffset.x, y: touchPoint.y - dragOffset.y)
+        
+        dragView.frame.origin = dragPoint
+        
+        self.draggingHoverCell?.contentView.transform = .identity
+        if let hoverCell = self.collectionView.visibleCells.filter({$0.frame.contains(dragPoint)}).first {
+            hoverCell.contentView.transform = .init(scaleX: 1.1, y: 1.1)
+            self.draggingHoverCell = hoverCell
+        } else {
+            self.draggingHoverCell = nil
+        }
+    }
+    
+    func didEndDragging(touch: UITouch, view: UIView) {
+        guard let dragView = self.draggingSnapshotView, let dragOffset = self.draggingSnapshotOffset else {
+            return
+        }
+        
+        let touchPoint = touch.location(in: self.view)
+        let dragPoint = CGPoint(x: touchPoint.x - dragOffset.x, y: touchPoint.y - dragOffset.y)
+        dragView.frame.origin = dragPoint
+        
+        self.draggingHoverCell?.contentView.transform = .identity
+        self.draggingHoverCell = nil
+        
+        if let hoverCell = self.collectionView.visibleCells.filter({$0.frame.contains(dragPoint)}).first {
+            // TODO: add allocation
+        }
+        
+        self.draggingSnapshotView?.removeFromSuperview()
+        self.draggingSnapshotView = nil
+    }
+    
+}
