@@ -56,7 +56,7 @@
                                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <constraints>
                                                                                 <constraint firstItem="eHx-3u-CoY" firstAttribute="centerX" secondItem="2bU-c9-jit" secondAttribute="centerX" id="5ZP-kw-Rhe"/>
-                                                                                <constraint firstAttribute="width" priority="950" constant="72" id="QQZ-DG-Q7x"/>
+                                                                                <constraint firstAttribute="width" priority="950" constant="56" id="QQZ-DG-Q7x"/>
                                                                                 <constraint firstItem="eHx-3u-CoY" firstAttribute="top" secondItem="2bU-c9-jit" secondAttribute="top" id="VUY-Im-WhU"/>
                                                                                 <constraint firstItem="eHx-3u-CoY" firstAttribute="leading" secondItem="2bU-c9-jit" secondAttribute="leading" priority="900" id="q25-wT-1QV"/>
                                                                                 <constraint firstAttribute="bottom" secondItem="eHx-3u-CoY" secondAttribute="bottom" id="tyD-d8-siX"/>
