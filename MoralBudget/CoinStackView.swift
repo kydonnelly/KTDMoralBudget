@@ -23,7 +23,6 @@ class CoinStackView : UIView {
         
         let coinSize = Self.coinImage.size
         let aspectRatio = coinSize.height / coinSize.width
-        let coinOffset = self.bounds.size.width * aspectRatio * 0.5
         
         self.coinSubviews = []
         for i in 0..<numCoins {
@@ -38,10 +37,16 @@ class CoinStackView : UIView {
             self.coinContainerView.addConstraint(imageView.centerXAnchor.constraint(equalTo: self.coinContainerView.centerXAnchor))
             imageView.addConstraint(imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor, multiplier: aspectRatio))
             
-            // stack coins top-to-bottom
-            self.coinContainerView.addConstraint(self.coinContainerView.bottomAnchor.constraint(equalTo: imageView.bottomAnchor, constant: CGFloat(i) * coinOffset))
+            if i == 0 {
+                // pin first coin to bottom of container
+                self.coinContainerView.addConstraint(self.coinContainerView.bottomAnchor.constraint(equalTo: imageView.bottomAnchor))
+            } else {
+                // pin next coins to previous coin
+                self.coinContainerView.addConstraint(imageView.centerYAnchor.constraint(equalTo: self.coinSubviews[i-1].topAnchor))
+            }
         }
         
+        // pin last coin to top, shrinking if needed
         if let lastCoin = self.coinSubviews.last {
             self.coinContainerView.addConstraint(lastCoin.topAnchor.constraint(greaterThanOrEqualTo: self.coinContainerView.topAnchor))
         }
