@@ -26,13 +26,17 @@ public class DepartmentAllocationCell : UICollectionViewCell {
         
         layer.shouldRasterize = true
         layer.rasterizationScale = UIScreen.main.scale
+        
+        for iconImageView in self.iconImageViews {
+            iconImageView.iconColor = UIColor(hexValue: 0x191919, alpha: 1.0)
+        }
     }
     
     func setup(departmentInfo: DepartmentInfo, myAllocation: Double, cityAllocation: Double) {
         let delta = Int(round(abs(myAllocation - cityAllocation) / cityAllocation * 100))
         
         for iconImageView in self.iconImageViews {
-            iconImageView.image = UIImage(named: departmentInfo.iconName)
+            iconImageView.setIcon(name: departmentInfo.iconName)
         }
         
         if (delta == 0) {

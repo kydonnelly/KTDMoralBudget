@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,10 @@
 		2725536D242FE90D009020EC /* CoinStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725536C242FE90D009020EC /* CoinStackView.swift */; };
 		2725536F24301A3B009020EC /* CoinsDraggableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725536E24301A3B009020EC /* CoinsDraggableProtocol.swift */; };
 		2725537124301C33009020EC /* UIImage+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725537024301C33009020EC /* UIImage+Snapshot.swift */; };
+		2725537724393E84009020EC /* MoralBudget.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2725537524393E84009020EC /* MoralBudget.ttf */; };
+		2725537824393E84009020EC /* MoralBudget.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2725537524393E84009020EC /* MoralBudget.ttf */; };
+		2725537924393E84009020EC /* MoralBudget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725537624393E84009020EC /* MoralBudget.swift */; };
+		2725537A24393E84009020EC /* MoralBudget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725537624393E84009020EC /* MoralBudget.swift */; };
 		27D7FE3C23F8C68E0052A2F6 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D7FE3B23F8C68E0052A2F6 /* RootViewController.swift */; };
 		27D7FE3E23F8C6CA0052A2F6 /* BuildBudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D7FE3D23F8C6CA0052A2F6 /* BuildBudgetViewController.swift */; };
 		27D7FE4023F8C6EA0052A2F6 /* BuildBudget.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27D7FE3F23F8C6EA0052A2F6 /* BuildBudget.storyboard */; };
@@ -60,6 +64,8 @@
 		2725536C242FE90D009020EC /* CoinStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinStackView.swift; sourceTree = "<group>"; };
 		2725536E24301A3B009020EC /* CoinsDraggableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsDraggableProtocol.swift; sourceTree = "<group>"; };
 		2725537024301C33009020EC /* UIImage+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Snapshot.swift"; sourceTree = "<group>"; };
+		2725537524393E84009020EC /* MoralBudget.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MoralBudget.ttf; sourceTree = "<group>"; };
+		2725537624393E84009020EC /* MoralBudget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoralBudget.swift; sourceTree = "<group>"; };
 		27D7FE3B23F8C68E0052A2F6 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		27D7FE3D23F8C6CA0052A2F6 /* BuildBudgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildBudgetViewController.swift; sourceTree = "<group>"; };
 		27D7FE3F23F8C6EA0052A2F6 /* BuildBudget.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BuildBudget.storyboard; sourceTree = "<group>"; };
@@ -113,6 +119,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2725537424393E84009020EC /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				2725537524393E84009020EC /* MoralBudget.ttf */,
+				2725537624393E84009020EC /* MoralBudget.swift */,
+			);
+			path = Icons;
+			sourceTree = "<group>";
+		};
 		27E6604C23F2CCE20051B3CF = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +172,7 @@
 				27E6605A23F2CCE20051B3CF /* SceneDelegate.swift */,
 				2710DCC4240F264700365E87 /* UIColor+Hex.swift */,
 				2725537024301C33009020EC /* UIImage+Snapshot.swift */,
+				2725537424393E84009020EC /* Icons */,
 				27E6606123F2CCE40051B3CF /* Assets.xcassets */,
 				27E6606323F2CCE40051B3CF /* LaunchScreen.storyboard */,
 				27D7FE5523FDFC780052A2F6 /* OaklandDepartments.json */,
@@ -211,6 +227,7 @@
 				27E6605123F2CCE20051B3CF /* Sources */,
 				27E6605223F2CCE20051B3CF /* Frameworks */,
 				27E6605323F2CCE20051B3CF /* Resources */,
+				275A87C03FA0F8D739322439 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -306,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2710DD5E2421F28800365E87 /* BudgetMap.storyboard in Resources */,
+				2725537724393E84009020EC /* MoralBudget.ttf in Resources */,
 				27D7FE4023F8C6EA0052A2F6 /* BuildBudget.storyboard in Resources */,
 				27E6606523F2CCE40051B3CF /* LaunchScreen.storyboard in Resources */,
 				27E6606223F2CCE40051B3CF /* Assets.xcassets in Resources */,
@@ -319,6 +337,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2725537824393E84009020EC /* MoralBudget.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +351,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		275A87C03FA0F8D739322439 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MoralBudget/Pods-MoralBudget-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MoralBudget/Pods-MoralBudget-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MoralBudget/Pods-MoralBudget-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E87EC44EF614ADFBAE7BEF3B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -363,6 +399,7 @@
 			files = (
 				2725536F24301A3B009020EC /* CoinsDraggableProtocol.swift in Sources */,
 				27D7FE3E23F8C6CA0052A2F6 /* BuildBudgetViewController.swift in Sources */,
+				2725537924393E84009020EC /* MoralBudget.swift in Sources */,
 				27D7FE4C23FB8CA30052A2F6 /* BudgetResultsViewController.swift in Sources */,
 				2710DD5A2421F0A100365E87 /* BudgetMapViewController.swift in Sources */,
 				2725536D242FE90D009020EC /* CoinStackView.swift in Sources */,
@@ -383,6 +420,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2725537A24393E84009020EC /* MoralBudget.swift in Sources */,
 				27E6607023F2CCE40051B3CF /* MoralBudgetTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

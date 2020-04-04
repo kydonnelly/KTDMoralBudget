@@ -96,7 +96,7 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="09C-Td-QoS">
                                                             <rect key="frame" x="64" y="0.0" width="64" height="128"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" image="park" translatesAutoresizingMaskIntoConstraints="NO" id="SBG-nf-B5Y">
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="SBG-nf-B5Y">
                                                                     <rect key="frame" x="6" y="42" width="44" height="44"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" relation="lessThanOrEqual" constant="96" id="aHw-1y-WUx"/>
@@ -154,7 +154,4 @@
             <point key="canvasLocation" x="139" y="130"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="park" width="492" height="488"/>
-    </resources>
 </document>

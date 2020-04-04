@@ -6,5 +6,6 @@ use_modular_headers!
 
 target 'MoralBudget' do
     pod 'KTDTreeMap', :testspecs => ['Tests']
+    pod 'KTDIconFont', :testspecs => ['Tests']
 end
 

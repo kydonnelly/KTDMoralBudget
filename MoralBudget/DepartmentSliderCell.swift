@@ -30,10 +30,16 @@ public class DepartmentSliderCell : UITableViewCell {
     public typealias LockBlock = ((Bool) -> Bool)
     private var lockBlock: LockBlock? = nil
     
+    public override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        self.iconImageView.iconColor = UIColor(hexValue: 0x191919, alpha: 1.0)
+    }
+    
     func setup(departmentInfo: DepartmentInfo, initialValue: Double, isLocked: Bool, updateBlock: UpdateBlock? = nil, lockBlock: LockBlock? = nil, touchUpBlock: TouchUpBlock? = nil) {
         self.titleLabel.text = departmentInfo.name
         
-        self.iconImageView.image = UIImage(named: departmentInfo.iconName)
+        self.iconImageView.setIcon(name: departmentInfo.iconName)
         self.sliderView.tintColor = departmentInfo.iconColor
         self.gradientView.update(colors: [UIColor(hexString: departmentInfo.hexColor, alpha: 0.75),
                                           UIColor(hexString: departmentInfo.hexColor, alpha: 0.60),

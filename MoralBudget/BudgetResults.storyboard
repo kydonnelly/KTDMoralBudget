@@ -54,7 +54,7 @@
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MGp-AQ-Q3V">
                                                                     <rect key="frame" x="103.5" y="17" width="36" height="76"/>
                                                                     <subviews>
-                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="public_works" translatesAutoresizingMaskIntoConstraints="NO" id="1v9-NO-Ank">
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1v9-NO-Ank">
                                                                             <rect key="frame" x="0.0" y="40" width="36" height="36"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" secondItem="1v9-NO-Ank" secondAttribute="height" multiplier="1:1" id="kkZ-8N-9mW"/>
@@ -83,7 +83,7 @@
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J7r-D9-3U2">
                                                                     <rect key="frame" x="103.5" y="17" width="36" height="76"/>
                                                                     <subviews>
-                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="public_works" translatesAutoresizingMaskIntoConstraints="NO" id="ima-b8-xjD">
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ima-b8-xjD">
                                                                             <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" secondItem="ima-b8-xjD" secondAttribute="height" multiplier="1:1" id="iJo-8s-74E"/>
@@ -217,6 +217,5 @@
         <image name="arrow.down.right" catalog="system" width="64" height="54"/>
         <image name="arrow.up.right" catalog="system" width="64" height="54"/>
         <image name="equal" catalog="system" width="64" height="36"/>
-        <image name="public_works" width="64" height="64"/>
     </resources>
 </document>
