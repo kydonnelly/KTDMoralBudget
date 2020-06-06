@@ -10,25 +10,50 @@ import UIKit
 
 class RootViewController : UIViewController {
     
+    @IBOutlet var cityPicker: UIPickerView!
+    
+    fileprivate var cities: [String] {
+        return BudgetDatabase.shared.allCities
+    }
+    
     @IBAction func pressedStartButton() {
-        guard let jsonPath = Bundle.main.path(forResource: "OaklandDepartments", ofType: "json") else {
-            return
-        }
-        
-        let decoder = JSONDecoder()
-        guard let data = try? Data(contentsOf: URL(fileURLWithPath: jsonPath), options: .alwaysMapped),
-              let jsonInfos = try? decoder.decode(Array<DepartmentInfo>.self, from: data) else {
-            return
-        }
-        
         let budgetMapStoryboard = UIStoryboard(name: "BudgetMap", bundle: .main)
         guard let budgetMapVC = budgetMapStoryboard.instantiateInitialViewController() as? BudgetMapViewController else {
             return
         }
         
-        budgetMapVC.setup(departments: jsonInfos)
+        let cityIndex = self.cityPicker.selectedRow(inComponent: 0)
+        let city = self.cities[cityIndex]
+        
+        let departmentInfos = BudgetDatabase.shared.departmentInfos(city: city)
+        
+        budgetMapVC.setup(city: city, departments: departmentInfos)
         
         self.navigationController?.pushViewController(budgetMapVC, animated: true)
+    }
+    
+}
+
+extension RootViewController: UIPickerViewDataSource {
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return self.cities.count
+    }
+    
+}
+
+extension RootViewController: UIPickerViewDelegate {
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        guard component == 0 else {
+            return nil
+        }
+        
+        return self.cities[row]
     }
     
 }

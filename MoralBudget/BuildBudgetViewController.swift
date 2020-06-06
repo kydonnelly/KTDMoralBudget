@@ -25,7 +25,9 @@ class BuildBudgetViewController : UIViewController {
     private var allocations: [Double] = []
     private var locks: [Bool] = []
     
-    func setup(departments: [DepartmentInfo]) {
+    func setup(city: String, departments: [DepartmentInfo]) {
+        self.navigationItem.title = city
+        
         self.departments = departments
         self.allocations = departments.map { $0.allocation }
         self.locks = Array(repeating: false, count: departments.count)

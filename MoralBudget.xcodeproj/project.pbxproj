@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		270B2701248C48FF001804D6 /* BudgetDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270B2700248C48FF001804D6 /* BudgetDatabase.swift */; };
 		2710DCC5240F264700365E87 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710DCC4240F264700365E87 /* UIColor+Hex.swift */; };
 		2710DCC72411C62E00365E87 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710DCC62411C62E00365E87 /* GradientView.swift */; };
 		2710DD5A2421F0A100365E87 /* BudgetMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710DD592421F0A100365E87 /* BudgetMapViewController.swift */; };
@@ -27,7 +28,7 @@
 		27D7FE4A23FB8C8D0052A2F6 /* BudgetResults.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27D7FE4923FB8C8D0052A2F6 /* BudgetResults.storyboard */; };
 		27D7FE4C23FB8CA30052A2F6 /* BudgetResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D7FE4B23FB8CA30052A2F6 /* BudgetResultsViewController.swift */; };
 		27D7FE5023FB8F7D0052A2F6 /* DepartmentAllocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D7FE4F23FB8F7D0052A2F6 /* DepartmentAllocationCell.swift */; };
-		27D7FE5623FDFC790052A2F6 /* OaklandDepartments.json in Resources */ = {isa = PBXBuildFile; fileRef = 27D7FE5523FDFC780052A2F6 /* OaklandDepartments.json */; };
+		27D7FE5623FDFC790052A2F6 /* Departments.json in Resources */ = {isa = PBXBuildFile; fileRef = 27D7FE5523FDFC780052A2F6 /* Departments.json */; };
 		27E6605923F2CCE20051B3CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E6605823F2CCE20051B3CF /* AppDelegate.swift */; };
 		27E6605B23F2CCE20051B3CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E6605A23F2CCE20051B3CF /* SceneDelegate.swift */; };
 		27E6606023F2CCE30051B3CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27E6605E23F2CCE30051B3CF /* Main.storyboard */; };
@@ -56,6 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		270B2700248C48FF001804D6 /* BudgetDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetDatabase.swift; sourceTree = "<group>"; };
 		2710DCC4240F264700365E87 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		2710DCC62411C62E00365E87 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		2710DD592421F0A100365E87 /* BudgetMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetMapViewController.swift; sourceTree = "<group>"; };
@@ -74,7 +76,7 @@
 		27D7FE4923FB8C8D0052A2F6 /* BudgetResults.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BudgetResults.storyboard; sourceTree = "<group>"; };
 		27D7FE4B23FB8CA30052A2F6 /* BudgetResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetResultsViewController.swift; sourceTree = "<group>"; };
 		27D7FE4F23FB8F7D0052A2F6 /* DepartmentAllocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentAllocationCell.swift; sourceTree = "<group>"; };
-		27D7FE5523FDFC780052A2F6 /* OaklandDepartments.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = OaklandDepartments.json; sourceTree = "<group>"; };
+		27D7FE5523FDFC780052A2F6 /* Departments.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Departments.json; sourceTree = "<group>"; };
 		27E6605523F2CCE20051B3CF /* MoralBudget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoralBudget.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27E6605823F2CCE20051B3CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27E6605A23F2CCE20051B3CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				27E6605823F2CCE20051B3CF /* AppDelegate.swift */,
+				270B2700248C48FF001804D6 /* BudgetDatabase.swift */,
 				2710DD5D2421F28800365E87 /* BudgetMap.storyboard */,
 				2710DD5B2421F1E500365E87 /* BudgetMapCell.swift */,
 				2710DD592421F0A100365E87 /* BudgetMapViewController.swift */,
@@ -175,7 +178,7 @@
 				2725537424393E84009020EC /* Icons */,
 				27E6606123F2CCE40051B3CF /* Assets.xcassets */,
 				27E6606323F2CCE40051B3CF /* LaunchScreen.storyboard */,
-				27D7FE5523FDFC780052A2F6 /* OaklandDepartments.json */,
+				27D7FE5523FDFC780052A2F6 /* Departments.json */,
 				27E6606623F2CCE40051B3CF /* Info.plist */,
 			);
 			path = MoralBudget;
@@ -328,7 +331,7 @@
 				27E6606523F2CCE40051B3CF /* LaunchScreen.storyboard in Resources */,
 				27E6606223F2CCE40051B3CF /* Assets.xcassets in Resources */,
 				27D7FE4A23FB8C8D0052A2F6 /* BudgetResults.storyboard in Resources */,
-				27D7FE5623FDFC790052A2F6 /* OaklandDepartments.json in Resources */,
+				27D7FE5623FDFC790052A2F6 /* Departments.json in Resources */,
 				27E6606023F2CCE30051B3CF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,6 +404,7 @@
 				27D7FE3E23F8C6CA0052A2F6 /* BuildBudgetViewController.swift in Sources */,
 				2725537924393E84009020EC /* MoralBudget.swift in Sources */,
 				27D7FE4C23FB8CA30052A2F6 /* BudgetResultsViewController.swift in Sources */,
+				270B2701248C48FF001804D6 /* BudgetDatabase.swift in Sources */,
 				2710DD5A2421F0A100365E87 /* BudgetMapViewController.swift in Sources */,
 				2725536D242FE90D009020EC /* CoinStackView.swift in Sources */,
 				2710DD5C2421F1E500365E87 /* BudgetMapCell.swift in Sources */,

@@ -27,7 +27,9 @@ class BudgetMapViewController : UIViewController {
     
     private var draggingInfo: DraggingInfo?
     
-    func setup(departments: [DepartmentInfo]) {
+    func setup(city: String, departments: [DepartmentInfo]) {
+        self.navigationItem.title = city
+        
         self.departments = departments
         self.allocations = departments.map { $0.allocation }
     }
