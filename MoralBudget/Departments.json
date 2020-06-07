@@ -1,0 +1,312 @@
+{
+    "Oakland, CA": [
+        {
+            "name": "Police",
+            "caption": "Police",
+            "details": "The Oakland Police Department is committed to reducing crime and serving the community through fair, quality policing.",
+            "allocation": 0.206,
+            "iconName": "policeman",
+            "attribution": "https://www.flaticon.com/authors/eucalyp",
+            "hexColor": "0x5175A0"
+        },
+        {
+            "name": "Fire",
+            "caption": "Fire",
+            "details": "The City of Oakland is protected at all times by the over 500 fire service professionals of the Oakland Fire Department.",
+            "allocation": 0.104,
+            "iconName": "fire",
+            "hexColor": "0xEF3E36"
+        },
+        {
+            "name": "Services",
+            "caption": "Human and Community Services",
+            "details": "Builds strong communities by enriching the quality of life for individuals and families in Oakland. Collaborates with a diverse group of local organizations to provide services that address the changing and emerging needs of the community.",
+            "allocation": 0.060,
+            "iconName": "social",
+            "hexColor": "0x6A7FDB"
+        },
+        {
+            "name": "Libraries",
+            "caption": "Library",
+            "details": "Empowers all people to explore, connect, and grow. The Oakland Public Library will be celebrated locally and nationally as an indispensable partner in transforming lives.",
+            "allocation": 0.024,
+            "iconName": "books",
+            "hexColor": "0xA89959"
+        },
+        {
+            "name": "Parks & Rec",
+            "caption": "Parks and Recreation",
+            "details": "With an emphasis on Oakland’s youth, Oakland Parks, Recreation & Youth Development and its partners provides best in class, relevant and equitable programs and services, while meeting the specific needs of people and communities both at the neighborhood level and regionally throughout the City of Oakland. Achieves this mission through intentional engagement and by removing the barriers that prohibit equitable opportunities for all.",
+            "allocation": 0.022,
+            "iconName": "park",
+            "attribution": "https://www.flaticon.com/authors/freepik",
+            "hexColor": "0x4B8F4B"
+        },
+        {
+            "name": "Housing",
+            "caption": "Housing and Community Development",
+            "details": "Dedicated to improving Oakland's neighborhoods and to making sure all Oaklanders have safe and affordable housing.",
+            "allocation": 0.013,
+            "iconName": "housing",
+            "hexColor": "0xC5D1EB"
+        },
+        {
+            "name": "Debt Payment",
+            "caption": "Debt Servicing",
+            "details": "Interest payments on existing debt.",
+            "allocation": 0.246,
+            "iconName": "debt",
+            "hexColor": "0x7A6C5D"
+        },
+        {
+            "name": "Infrastructure",
+            "caption": "Capital Improvement",
+            "details": "The addition of a permanent structural change or the restoration of some aspect of a property that will either enhance the property's overall value, increases its useful life or adapts it to a new use.",
+            "allocation": 0.040,
+            "iconName": "infrastructure",
+            "attribution": "https://www.flaticon.com/authors/freepik",
+            "hexColor": "0xEC4E20"
+        },
+        {
+            "name": "Jobs",
+            "caption": "Economic and Workforce Development",
+            "details": "Increases investment in Oakland in a way that contributes to the growth of the City’s economy, fosters fiscal sustainability, expands job opportunities for all Oakland residents, and enhances the City’s sense of place and quality of life.",
+            "allocation": 0.020,
+            "iconName": "work",
+            "hexColor": "0x8BB174"
+        },
+        {
+            "name": "Public Works",
+            "caption": "Public Works",
+            "details": "Plans, builds, and takes care of the physical and environmental parts of the City of Oakland. Makes the City a great place to live, work, invest and visit.",
+            "allocation": 0.102,
+            "iconName": "publicworks",
+            "hexColor": "0xECA72C"
+        },
+        {
+            "name": "Administrative",
+            "caption": "Government Operations",
+            "details": "Oversees the day-to-day operations of all City departments to ensure the goals and policy directives of the Mayor and City Council are implemented.",
+            "allocation": 0.137,
+            "iconName": "legal",
+            "hexColor": "0x4E8C85"
+        },
+        {
+            "name": "Planning",
+            "caption": "Planning and Building",
+            "details": "Oversees the regulations for the City's growth and development. Reviews project plans, enforces local ordinances, develops neighborhood plans, and responds to public concerns to create a built environment that supports the health and welfare of all Oaklanders.",
+            "allocation": 0.026,
+            "iconName": "planning",
+            "hexColor": "0xAF8CE2"
+        }
+    ],
+    "San Francisco, CA": [
+        {
+            "name": "Public Protection",
+            "caption": "Police, Fire, Public Defender",
+            "details": "",
+            "allocation": 0.1547,
+            "iconName": "policeman",
+            "attribution": "https://www.flaticon.com/authors/eucalyp",
+            "hexColor": "0x5175A0"
+        },
+        {
+            "name": "Services",
+            "caption": "Human Welfare & Neighborhood Development",
+            "details": "",
+            "allocation": 0.1468,
+            "iconName": "housing",
+            "hexColor": "0x6A7FDB"
+        },
+        {
+            "name": "Culture & Recreation",
+            "caption": "Libraries, Museums, Parks & Rec",
+            "details": "",
+            "allocation": 0.0428,
+            "iconName": "park",
+            "attribution": "https://www.flaticon.com/authors/freepik",
+            "hexColor": "0x4B8F4B"
+        },
+        {
+            "name": "Public Works",
+            "caption": "Public Works, Transportation, and Commerce",
+            "details": "Aiport, PUC, MTA, EWD",
+            "allocation": 0.3696,
+            "iconName": "publicworks",
+            "hexColor": "0xECA72C"
+        },
+        {
+            "name": "Administrative",
+            "caption": "General Administration & Finance",
+            "details": "",
+            "allocation": 0.1178,
+            "iconName": "legal",
+            "hexColor": "0x4E8C85"
+        },
+        {
+            "name": "Obligations",
+            "caption": "General City Responsibilities",
+            "details": "",
+            "allocation": 0.2116,
+            "iconName": "debt",
+            "hexColor": "0x7A6C5D"
+        },
+        {
+            "name": "Health",
+            "caption": "Community Health",
+            "details": "",
+            "allocation": 0.2224,
+            "iconName": "social",
+            "hexColor": "0xAF8CE2"
+        }
+    ],
+    "Los Angeles, CA": [
+        {
+            "name": "Police",
+            "caption": "Police",
+            "details": "This Department has the duty and power to enforce the penal divisions of the City Charter, the ordinances of the City, and state and federal laws for the purpose of protecting persons and property and for the preservation of the peace of the community. To these ends the Department engages in patrol, prevention of crime, investigation of reported crime, apprehension of suspects, the gathering and presentation of evidence, detention of unarraigned persons, enforcement of traffic laws, investigations of traffic accidents, custody of property, and such staff services as are necessary to engage in these activities.",
+            "allocation": 0.1764,
+            "iconName": "policeman",
+            "attribution": "https://www.flaticon.com/authors/eucalyp",
+            "hexColor": "0x5175A0"
+        },
+        {
+            "name": "Fire",
+            "caption": "Fire",
+            "details": "This Department provides rescue and emergency medical services; controls and extinguishes dangerous fires; protects life and property from fire risks by inspecting buildings for fire hazards and enforcing fire prevention laws; carries on a fire prevention educational program; and investigates suspected cases of arson.",
+            "allocation": 0.0662,
+            "iconName": "fire",
+            "hexColor": "0xEF3E36"
+        },
+        {
+            "name": "Services",
+            "caption": "City Programs and Cultural Affairs",
+            "details": "This Department provides internal support for City programs in the delivery of services to City residents. Services include the following: fleet, building services, procurement and stores inventory, fuel, construction and alterations, custodial, real estate, mail and messenger, parking, emergency management and special event coordination, materials testing, and printing services. By ordinance, the General Manager fills the Charter-established position of Purchasing Agent.",
+            "allocation": 0.021,
+            "iconName": "social",
+            "hexColor": "0x6A7FDB"
+        },
+        {
+            "name": "Libraries",
+            "caption": "Library",
+            "details": "Library Appropriation",
+            "allocation": 0.0195,
+            "iconName": "books",
+            "hexColor": "0xA89959"
+        },
+        {
+            "name": "Parks & Rec",
+            "caption": "Parks and Recreation",
+            "details": "Charter Section 593 provides that a sum is appropriated annually for the financial support of the Department of Recreation and Parks in an amount not less than 0.0325 percent of the assessed value of all property as assessed for City taxes. In accordance with Charter Section 246, the Department may request assistance from the Council in the performance of its functions with appropriations of money or otherwise. Departmental revenue and total Recreation and Parks budget and supporting data are shown in Section 4. See the footnotes page at the end of Section 2 Part III of the Charter appropriation requirement for Recreation and Parks.",
+            "allocation": 0.0215,
+            "iconName": "park",
+            "attribution": "https://www.flaticon.com/authors/freepik",
+            "hexColor": "0x4B8F4B"
+        },
+        {
+            "name": "Housing",
+            "caption": "Housing and Community Investment",
+            "details": "The Housing and Community Investment Department develops Citywide housing policy and supports viable urban communities by advocating for safe and livable neighborhoods through the promotion, development, and preservation of decent and safe affordable housing and by expanding economic opportunities, principally for low- and moderate- income individuals to improve access and livability through place-based strategies. The Department's key programs are Development and Finance, Asset Management, Consolidated Planning, Rent Stabilization, Multi-family Residential Code Enforcement, Code and Rent Compliance, Commissions and Community Engagement, Program Operations, and Accessible Housing Program.",
+            "allocation": 0.0078,
+            "iconName": "housing",
+            "hexColor": "0xC5D1EB"
+        },
+        {
+            "name": "Transportation",
+            "caption": "Transit and Assistance",
+            "details": "This Department is responsible for the development of plans to meet the ground transportation needs of the traveling public and commerce; it has centralized authority over the conceptual planning and operation of the City's streets and highways system; and it provides a primary interface with other governmental agencies on transportation matters. The Department studies parking and traffic needs; provides for the installation and maintenance of traffic signs, signals, parking meters, street name signs, and other transportation control devices; controls traffic and pedestrian movement at all intersections; enforces parking rules and regulations and accounts for all revenue therefrom; coordinates the development of off-street parking; oversees crossing guard services; provides public utility",
+            "allocation": 0.0384,
+            "iconName": "housing",
+            "hexColor": "0xC5D1EB"
+        },
+        {
+            "name": "Debt Payment",
+            "caption": "Debt Servicing",
+            "details": "Interest payments on existing debt, such as retirement and pension funds.",
+            "allocation": 0.126,
+            "iconName": "debt",
+            "hexColor": "0x7A6C5D"
+        },
+        {
+            "name": "Finance",
+            "caption": "Capital Finance",
+            "details": "An annual sum is appropriated to make lease and other payments, including trustee and arbitrage fees, required by various non-general obligation, long-term City financing programs. These financing programs utilize a financing lease or lease purchase generally paid out of General Fund appropriations and the sale of public securities (lease revenue bonds or certificates of participation) to acquire facilities and equipment items for use by City departments.",
+            "allocation": 0.0262,
+            "iconName": "debt",
+            "hexColor": "0x7A6C5D"
+        },
+        {
+            "name": "Infrastructure",
+            "caption": "Capital Improvement",
+            "details": "The addition of a permanent structural change or the restoration of some aspect of a property that will either enhance the property's overall value, increases its useful life or adapts it to a new use.",
+            "allocation": 0.0449,
+            "iconName": "infrastructure",
+            "attribution": "https://www.flaticon.com/authors/freepik",
+            "hexColor": "0xEC4E20"
+        },
+        {
+            "name": "Jobs",
+            "caption": "Economic and Workforce Development",
+            "details": "The Economic and Workforce Development Department initiates and promotes economic development projects to build local businesses and provide residents with tools for quality employment. The Department promotes economic and workforce development in the City through the implementation of various federal and other grant funded programs. Services include direct and indirect financing and technical assistance programs, including services available for local businesses at the City's BusinessSource Centers. The Department administers the Annual Plan of the City of Los Angeles Workforce Development Board, which includes the annual allocation of federal workforce grant funds. The Department oversees employment services for job seekers through WorkSource Centers and YouthSource Centers, and employme...",
+            "allocation": 0.0016,
+            "iconName": "work",
+            "hexColor": "0x8BB174"
+        },
+        {
+            "name": "Public Works",
+            "caption": "Public Works",
+            "details": "The Bureau's objective is to enhance public safety, mobility, health, and neighborhood quality of life by revitalizing the streetscape. Its three outcome goals are to (i) improve the quality of the road surface, (ii) maintain a safe, clean and green public right-of-way, and (iii) build streetscape improvements. The four core programs that support these outcome goals are Pavement Preservation, Urban Forestry, Motorized Street Sweeping, and Enforcement. Pavement Preservation includes resurfacing, slurry seal, small asphalt repairs, and the Pavement Management System, which maintains a comprehensive database of road surface conditions throughout the city. Urban Forestry includes the management and care of street trees and landscaped median islands and the issuance of permits relating to t",
+            "allocation": 0.1094,
+            "iconName": "publicworks",
+            "hexColor": "0xECA72C"
+        },
+        {
+            "name": "Sanitation",
+            "caption": "Wastewater, Solid Waste, Recycling",
+            "details": "An annual sum is appropriated to reimburse the General Fund for the related costs (including General City Overhead) of City departments, offices and bureaus providing support to the Wastewater System Improvement Program. Provision is made for direct payment of non-salary related expense, equipment and special costs previously budgeted in operating budgets through subventions from Sewer Construction and Maintenance funds. An amount equal to 45 days operation and maintenance costs is reserved in accordance with the requirements of the General Resolution authorizing the Wastewater System Revenue Bonds. Funds are appropriated for bond redemption and interest on Wastewater System Revenue bonds.",
+            "allocation": 0.1157,
+            "iconName": "legal",
+            "hexColor": "0x4E8C85"
+        },
+        {
+            "name": "Administrative",
+            "caption": "Human Resources",
+            "details": "Staff, City Attorney, City Worker compensation programs, Public Relations",
+            "allocation": 0.1359,
+            "iconName": "legal",
+            "hexColor": "0x4E8C85"
+        },
+        {
+            "name": "Planning",
+            "caption": "Planning, Building and Safety",
+            "details": "The Department of City Planning's mission is to create and implement plans, policies, and programs that realize a vision of Los Angeles as a collection of healthy and sustainable neighborhoods, each with a distinct sense of place, based on a foundation of mobility, economic vitality, and improved quality of life for all residents. Building and Safety enforces all ordinances and laws relating to the construction, alteration, repair, demolition, removal or relocation of buildings or structures as well as the installation, alteration, repair, use and operation of heating, plumbing, lighting, ventilating, refrigerating, electrical and mechanical appliances, and equipment therein. The Department enforces the zoning ordinance of the City; provides a preventive as well as a corrective program for the rehabilitation of substandard private buildings, commercial buildings, schools, hospitals, and places of public assembly; provides a program for inspection of all excavations and fills on private property; enforces the swimming pool fencing ordinance; tests and approves plumbing appliances and equipment for sale in the City.",
+            "allocation": 0.0535,
+            "iconName": "planning",
+            "hexColor": "0xAF8CE2"
+        },
+        {
+            "name": "Other",
+            "caption": "Aging, Animal Services...",
+            "details": "Collection of departments with small allocations.",
+            "allocation": 0.0553,
+            "iconName": "planning",
+            "hexColor": "0xAF8CE2"
+        },
+        {
+            "name": "Zoo",
+            "caption": "Zoo and Botanical Gardens",
+            "details": "This Department is responsible for the operation and maintenance of the Los Angeles Zoo and Botanical Gardens including curatorial services, animal exhibit and health services, public information and education, facility maintenance, capital improvement administration, and business operations.",
+            "allocation": 0.0019,
+            "iconName": "planning",
+            "hexColor": "0xAF8CE2"
+        },
+        {
+            "name": "Neighborhood Empowerment",
+            "caption": "Department of Neighborhood Empowerment",
+            "details": "The Department of Neighborhood Empowerment, as established by Charter, has the mission of promoting citizen participation in government and making government more responsive to local needs by developing a citywide system of neighborhood councils. The adopted Plan for a Citywide System of Neighborhood Councils (Plan) ensures that every part of the City is within the boundary of a neighborhood council. The Department assists neighborhoods in preparing petitions for recognition or certification, identifying boundaries that do not divide communities, and organizing themselves, in accordance with the Plan. It coordinates the bi-annual Congress of Neighborhood Council meetings and arranges training for the neighborhood councils' officers and staff.",
+            "allocation": 0.0002,
+            "iconName": "planning",
+            "hexColor": "0xAF8CE2"
+        }
+    ]
+}

@@ -1,0 +1,747 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		270B2701248C48FF001804D6 /* BudgetDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270B2700248C48FF001804D6 /* BudgetDatabase.swift */; };
+		2710DCC5240F264700365E87 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710DCC4240F264700365E87 /* UIColor+Hex.swift */; };
+		2710DCC72411C62E00365E87 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710DCC62411C62E00365E87 /* GradientView.swift */; };
+		2710DD5A2421F0A100365E87 /* BudgetMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710DD592421F0A100365E87 /* BudgetMapViewController.swift */; };
+		2710DD5C2421F1E500365E87 /* BudgetMapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710DD5B2421F1E500365E87 /* BudgetMapCell.swift */; };
+		2710DD5E2421F28800365E87 /* BudgetMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2710DD5D2421F28800365E87 /* BudgetMap.storyboard */; };
+		2725536D242FE90D009020EC /* CoinStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725536C242FE90D009020EC /* CoinStackView.swift */; };
+		2725536F24301A3B009020EC /* CoinsDraggableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725536E24301A3B009020EC /* CoinsDraggableProtocol.swift */; };
+		2725537124301C33009020EC /* UIImage+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725537024301C33009020EC /* UIImage+Snapshot.swift */; };
+		2725537724393E84009020EC /* MoralBudget.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2725537524393E84009020EC /* MoralBudget.ttf */; };
+		2725537824393E84009020EC /* MoralBudget.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2725537524393E84009020EC /* MoralBudget.ttf */; };
+		2725537924393E84009020EC /* MoralBudget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725537624393E84009020EC /* MoralBudget.swift */; };
+		2725537A24393E84009020EC /* MoralBudget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725537624393E84009020EC /* MoralBudget.swift */; };
+		27D7FE3C23F8C68E0052A2F6 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D7FE3B23F8C68E0052A2F6 /* RootViewController.swift */; };
+		27D7FE3E23F8C6CA0052A2F6 /* BuildBudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D7FE3D23F8C6CA0052A2F6 /* BuildBudgetViewController.swift */; };
+		27D7FE4023F8C6EA0052A2F6 /* BuildBudget.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27D7FE3F23F8C6EA0052A2F6 /* BuildBudget.storyboard */; };
+		27D7FE4423F8C7B40052A2F6 /* DepartmentSliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D7FE4323F8C7B40052A2F6 /* DepartmentSliderCell.swift */; };
+		27D7FE4823F8E4FF0052A2F6 /* DepartmentInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D7FE4723F8E4FF0052A2F6 /* DepartmentInfo.swift */; };
+		27D7FE4A23FB8C8D0052A2F6 /* BudgetResults.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27D7FE4923FB8C8D0052A2F6 /* BudgetResults.storyboard */; };
+		27D7FE4C23FB8CA30052A2F6 /* BudgetResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D7FE4B23FB8CA30052A2F6 /* BudgetResultsViewController.swift */; };
+		27D7FE5023FB8F7D0052A2F6 /* DepartmentAllocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D7FE4F23FB8F7D0052A2F6 /* DepartmentAllocationCell.swift */; };
+		27D7FE5623FDFC790052A2F6 /* Departments.json in Resources */ = {isa = PBXBuildFile; fileRef = 27D7FE5523FDFC780052A2F6 /* Departments.json */; };
+		27E6605923F2CCE20051B3CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E6605823F2CCE20051B3CF /* AppDelegate.swift */; };
+		27E6605B23F2CCE20051B3CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E6605A23F2CCE20051B3CF /* SceneDelegate.swift */; };
+		27E6606023F2CCE30051B3CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27E6605E23F2CCE30051B3CF /* Main.storyboard */; };
+		27E6606223F2CCE40051B3CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27E6606123F2CCE40051B3CF /* Assets.xcassets */; };
+		27E6606523F2CCE40051B3CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27E6606323F2CCE40051B3CF /* LaunchScreen.storyboard */; };
+		27E6607023F2CCE40051B3CF /* MoralBudgetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E6606F23F2CCE40051B3CF /* MoralBudgetTests.swift */; };
+		27E6607B23F2CCE40051B3CF /* MoralBudgetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E6607A23F2CCE40051B3CF /* MoralBudgetUITests.swift */; };
+		29C4E0C957EC02969C76A9FF /* libPods-MoralBudget.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56B643730493287A43C44804 /* libPods-MoralBudget.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		27E6606C23F2CCE40051B3CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27E6604D23F2CCE20051B3CF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27E6605423F2CCE20051B3CF;
+			remoteInfo = MoralBudget;
+		};
+		27E6607723F2CCE40051B3CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27E6604D23F2CCE20051B3CF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27E6605423F2CCE20051B3CF;
+			remoteInfo = MoralBudget;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		270B2700248C48FF001804D6 /* BudgetDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetDatabase.swift; sourceTree = "<group>"; };
+		2710DCC4240F264700365E87 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		2710DCC62411C62E00365E87 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		2710DD592421F0A100365E87 /* BudgetMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetMapViewController.swift; sourceTree = "<group>"; };
+		2710DD5B2421F1E500365E87 /* BudgetMapCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetMapCell.swift; sourceTree = "<group>"; };
+		2710DD5D2421F28800365E87 /* BudgetMap.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BudgetMap.storyboard; sourceTree = "<group>"; };
+		2725536C242FE90D009020EC /* CoinStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinStackView.swift; sourceTree = "<group>"; };
+		2725536E24301A3B009020EC /* CoinsDraggableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsDraggableProtocol.swift; sourceTree = "<group>"; };
+		2725537024301C33009020EC /* UIImage+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Snapshot.swift"; sourceTree = "<group>"; };
+		2725537524393E84009020EC /* MoralBudget.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MoralBudget.ttf; sourceTree = "<group>"; };
+		2725537624393E84009020EC /* MoralBudget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoralBudget.swift; sourceTree = "<group>"; };
+		27D7FE3B23F8C68E0052A2F6 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		27D7FE3D23F8C6CA0052A2F6 /* BuildBudgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildBudgetViewController.swift; sourceTree = "<group>"; };
+		27D7FE3F23F8C6EA0052A2F6 /* BuildBudget.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BuildBudget.storyboard; sourceTree = "<group>"; };
+		27D7FE4323F8C7B40052A2F6 /* DepartmentSliderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentSliderCell.swift; sourceTree = "<group>"; };
+		27D7FE4723F8E4FF0052A2F6 /* DepartmentInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentInfo.swift; sourceTree = "<group>"; };
+		27D7FE4923FB8C8D0052A2F6 /* BudgetResults.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BudgetResults.storyboard; sourceTree = "<group>"; };
+		27D7FE4B23FB8CA30052A2F6 /* BudgetResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetResultsViewController.swift; sourceTree = "<group>"; };
+		27D7FE4F23FB8F7D0052A2F6 /* DepartmentAllocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentAllocationCell.swift; sourceTree = "<group>"; };
+		27D7FE5523FDFC780052A2F6 /* Departments.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Departments.json; sourceTree = "<group>"; };
+		27E6605523F2CCE20051B3CF /* MoralBudget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoralBudget.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		27E6605823F2CCE20051B3CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		27E6605A23F2CCE20051B3CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		27E6605F23F2CCE30051B3CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		27E6606123F2CCE40051B3CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		27E6606423F2CCE40051B3CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		27E6606623F2CCE40051B3CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27E6606B23F2CCE40051B3CF /* MoralBudgetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoralBudgetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		27E6606F23F2CCE40051B3CF /* MoralBudgetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoralBudgetTests.swift; sourceTree = "<group>"; };
+		27E6607123F2CCE40051B3CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27E6607623F2CCE40051B3CF /* MoralBudgetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoralBudgetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		27E6607A23F2CCE40051B3CF /* MoralBudgetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoralBudgetUITests.swift; sourceTree = "<group>"; };
+		27E6607C23F2CCE40051B3CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39BA444095DF09EBB40E097F /* Pods-MoralBudget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoralBudget.debug.xcconfig"; path = "Target Support Files/Pods-MoralBudget/Pods-MoralBudget.debug.xcconfig"; sourceTree = "<group>"; };
+		56B643730493287A43C44804 /* libPods-MoralBudget.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MoralBudget.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		711E018A2F05B1A1CA31972E /* Pods-MoralBudget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoralBudget.release.xcconfig"; path = "Target Support Files/Pods-MoralBudget/Pods-MoralBudget.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		27E6605223F2CCE20051B3CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29C4E0C957EC02969C76A9FF /* libPods-MoralBudget.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27E6606823F2CCE40051B3CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27E6607323F2CCE40051B3CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2725537424393E84009020EC /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				2725537524393E84009020EC /* MoralBudget.ttf */,
+				2725537624393E84009020EC /* MoralBudget.swift */,
+			);
+			path = Icons;
+			sourceTree = "<group>";
+		};
+		27E6604C23F2CCE20051B3CF = {
+			isa = PBXGroup;
+			children = (
+				27E6605723F2CCE20051B3CF /* MoralBudget */,
+				27E6606E23F2CCE40051B3CF /* MoralBudgetTests */,
+				27E6607923F2CCE40051B3CF /* MoralBudgetUITests */,
+				27E6605623F2CCE20051B3CF /* Products */,
+				41AF0DE86854816F88A6D981 /* Pods */,
+				EDA1DE96C1C37C6A5F0137FB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		27E6605623F2CCE20051B3CF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				27E6605523F2CCE20051B3CF /* MoralBudget.app */,
+				27E6606B23F2CCE40051B3CF /* MoralBudgetTests.xctest */,
+				27E6607623F2CCE40051B3CF /* MoralBudgetUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		27E6605723F2CCE20051B3CF /* MoralBudget */ = {
+			isa = PBXGroup;
+			children = (
+				27E6605823F2CCE20051B3CF /* AppDelegate.swift */,
+				270B2700248C48FF001804D6 /* BudgetDatabase.swift */,
+				2710DD5D2421F28800365E87 /* BudgetMap.storyboard */,
+				2710DD5B2421F1E500365E87 /* BudgetMapCell.swift */,
+				2710DD592421F0A100365E87 /* BudgetMapViewController.swift */,
+				27D7FE4923FB8C8D0052A2F6 /* BudgetResults.storyboard */,
+				27D7FE4B23FB8CA30052A2F6 /* BudgetResultsViewController.swift */,
+				27D7FE3F23F8C6EA0052A2F6 /* BuildBudget.storyboard */,
+				27D7FE3D23F8C6CA0052A2F6 /* BuildBudgetViewController.swift */,
+				2725536C242FE90D009020EC /* CoinStackView.swift */,
+				2725536E24301A3B009020EC /* CoinsDraggableProtocol.swift */,
+				27D7FE4723F8E4FF0052A2F6 /* DepartmentInfo.swift */,
+				27D7FE4F23FB8F7D0052A2F6 /* DepartmentAllocationCell.swift */,
+				27D7FE4323F8C7B40052A2F6 /* DepartmentSliderCell.swift */,
+				2710DCC62411C62E00365E87 /* GradientView.swift */,
+				27E6605E23F2CCE30051B3CF /* Main.storyboard */,
+				27D7FE3B23F8C68E0052A2F6 /* RootViewController.swift */,
+				27E6605A23F2CCE20051B3CF /* SceneDelegate.swift */,
+				2710DCC4240F264700365E87 /* UIColor+Hex.swift */,
+				2725537024301C33009020EC /* UIImage+Snapshot.swift */,
+				2725537424393E84009020EC /* Icons */,
+				27E6606123F2CCE40051B3CF /* Assets.xcassets */,
+				27E6606323F2CCE40051B3CF /* LaunchScreen.storyboard */,
+				27D7FE5523FDFC780052A2F6 /* Departments.json */,
+				27E6606623F2CCE40051B3CF /* Info.plist */,
+			);
+			path = MoralBudget;
+			sourceTree = "<group>";
+		};
+		27E6606E23F2CCE40051B3CF /* MoralBudgetTests */ = {
+			isa = PBXGroup;
+			children = (
+				27E6606F23F2CCE40051B3CF /* MoralBudgetTests.swift */,
+				27E6607123F2CCE40051B3CF /* Info.plist */,
+			);
+			path = MoralBudgetTests;
+			sourceTree = "<group>";
+		};
+		27E6607923F2CCE40051B3CF /* MoralBudgetUITests */ = {
+			isa = PBXGroup;
+			children = (
+				27E6607A23F2CCE40051B3CF /* MoralBudgetUITests.swift */,
+				27E6607C23F2CCE40051B3CF /* Info.plist */,
+			);
+			path = MoralBudgetUITests;
+			sourceTree = "<group>";
+		};
+		41AF0DE86854816F88A6D981 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				39BA444095DF09EBB40E097F /* Pods-MoralBudget.debug.xcconfig */,
+				711E018A2F05B1A1CA31972E /* Pods-MoralBudget.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EDA1DE96C1C37C6A5F0137FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				56B643730493287A43C44804 /* libPods-MoralBudget.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		27E6605423F2CCE20051B3CF /* MoralBudget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27E6607F23F2CCE40051B3CF /* Build configuration list for PBXNativeTarget "MoralBudget" */;
+			buildPhases = (
+				E87EC44EF614ADFBAE7BEF3B /* [CP] Check Pods Manifest.lock */,
+				27E6605123F2CCE20051B3CF /* Sources */,
+				27E6605223F2CCE20051B3CF /* Frameworks */,
+				27E6605323F2CCE20051B3CF /* Resources */,
+				275A87C03FA0F8D739322439 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MoralBudget;
+			productName = MoralBudget;
+			productReference = 27E6605523F2CCE20051B3CF /* MoralBudget.app */;
+			productType = "com.apple.product-type.application";
+		};
+		27E6606A23F2CCE40051B3CF /* MoralBudgetTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27E6608223F2CCE40051B3CF /* Build configuration list for PBXNativeTarget "MoralBudgetTests" */;
+			buildPhases = (
+				27E6606723F2CCE40051B3CF /* Sources */,
+				27E6606823F2CCE40051B3CF /* Frameworks */,
+				27E6606923F2CCE40051B3CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				27E6606D23F2CCE40051B3CF /* PBXTargetDependency */,
+			);
+			name = MoralBudgetTests;
+			productName = MoralBudgetTests;
+			productReference = 27E6606B23F2CCE40051B3CF /* MoralBudgetTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		27E6607523F2CCE40051B3CF /* MoralBudgetUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27E6608523F2CCE40051B3CF /* Build configuration list for PBXNativeTarget "MoralBudgetUITests" */;
+			buildPhases = (
+				27E6607223F2CCE40051B3CF /* Sources */,
+				27E6607323F2CCE40051B3CF /* Frameworks */,
+				27E6607423F2CCE40051B3CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				27E6607823F2CCE40051B3CF /* PBXTargetDependency */,
+			);
+			name = MoralBudgetUITests;
+			productName = MoralBudgetUITests;
+			productReference = 27E6607623F2CCE40051B3CF /* MoralBudgetUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		27E6604D23F2CCE20051B3CF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Kyle Donnelly";
+				TargetAttributes = {
+					27E6605423F2CCE20051B3CF = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					27E6606A23F2CCE40051B3CF = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 27E6605423F2CCE20051B3CF;
+					};
+					27E6607523F2CCE40051B3CF = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 27E6605423F2CCE20051B3CF;
+					};
+				};
+			};
+			buildConfigurationList = 27E6605023F2CCE20051B3CF /* Build configuration list for PBXProject "MoralBudget" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 27E6604C23F2CCE20051B3CF;
+			productRefGroup = 27E6605623F2CCE20051B3CF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				27E6605423F2CCE20051B3CF /* MoralBudget */,
+				27E6606A23F2CCE40051B3CF /* MoralBudgetTests */,
+				27E6607523F2CCE40051B3CF /* MoralBudgetUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		27E6605323F2CCE20051B3CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2710DD5E2421F28800365E87 /* BudgetMap.storyboard in Resources */,
+				2725537724393E84009020EC /* MoralBudget.ttf in Resources */,
+				27D7FE4023F8C6EA0052A2F6 /* BuildBudget.storyboard in Resources */,
+				27E6606523F2CCE40051B3CF /* LaunchScreen.storyboard in Resources */,
+				27E6606223F2CCE40051B3CF /* Assets.xcassets in Resources */,
+				27D7FE4A23FB8C8D0052A2F6 /* BudgetResults.storyboard in Resources */,
+				27D7FE5623FDFC790052A2F6 /* Departments.json in Resources */,
+				27E6606023F2CCE30051B3CF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27E6606923F2CCE40051B3CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2725537824393E84009020EC /* MoralBudget.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27E6607423F2CCE40051B3CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		275A87C03FA0F8D739322439 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MoralBudget/Pods-MoralBudget-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MoralBudget/Pods-MoralBudget-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MoralBudget/Pods-MoralBudget-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E87EC44EF614ADFBAE7BEF3B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MoralBudget-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		27E6605123F2CCE20051B3CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2725536F24301A3B009020EC /* CoinsDraggableProtocol.swift in Sources */,
+				27D7FE3E23F8C6CA0052A2F6 /* BuildBudgetViewController.swift in Sources */,
+				2725537924393E84009020EC /* MoralBudget.swift in Sources */,
+				27D7FE4C23FB8CA30052A2F6 /* BudgetResultsViewController.swift in Sources */,
+				270B2701248C48FF001804D6 /* BudgetDatabase.swift in Sources */,
+				2710DD5A2421F0A100365E87 /* BudgetMapViewController.swift in Sources */,
+				2725536D242FE90D009020EC /* CoinStackView.swift in Sources */,
+				2710DD5C2421F1E500365E87 /* BudgetMapCell.swift in Sources */,
+				2710DCC72411C62E00365E87 /* GradientView.swift in Sources */,
+				27D7FE4423F8C7B40052A2F6 /* DepartmentSliderCell.swift in Sources */,
+				2710DCC5240F264700365E87 /* UIColor+Hex.swift in Sources */,
+				27D7FE4823F8E4FF0052A2F6 /* DepartmentInfo.swift in Sources */,
+				27D7FE5023FB8F7D0052A2F6 /* DepartmentAllocationCell.swift in Sources */,
+				27E6605923F2CCE20051B3CF /* AppDelegate.swift in Sources */,
+				27E6605B23F2CCE20051B3CF /* SceneDelegate.swift in Sources */,
+				2725537124301C33009020EC /* UIImage+Snapshot.swift in Sources */,
+				27D7FE3C23F8C68E0052A2F6 /* RootViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27E6606723F2CCE40051B3CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2725537A24393E84009020EC /* MoralBudget.swift in Sources */,
+				27E6607023F2CCE40051B3CF /* MoralBudgetTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27E6607223F2CCE40051B3CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27E6607B23F2CCE40051B3CF /* MoralBudgetUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		27E6606D23F2CCE40051B3CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27E6605423F2CCE20051B3CF /* MoralBudget */;
+			targetProxy = 27E6606C23F2CCE40051B3CF /* PBXContainerItemProxy */;
+		};
+		27E6607823F2CCE40051B3CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27E6605423F2CCE20051B3CF /* MoralBudget */;
+			targetProxy = 27E6607723F2CCE40051B3CF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		27E6605E23F2CCE30051B3CF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27E6605F23F2CCE30051B3CF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		27E6606323F2CCE40051B3CF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27E6606423F2CCE40051B3CF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		27E6607D23F2CCE40051B3CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		27E6607E23F2CCE40051B3CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		27E6608023F2CCE40051B3CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39BA444095DF09EBB40E097F /* Pods-MoralBudget.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MoralBudget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cooperative4thecommunity.MoralBudget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		27E6608123F2CCE40051B3CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 711E018A2F05B1A1CA31972E /* Pods-MoralBudget.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MoralBudget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cooperative4thecommunity.MoralBudget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		27E6608323F2CCE40051B3CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MoralBudgetTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cooperative4thecommunity.MoralBudgetTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoralBudget.app/MoralBudget";
+			};
+			name = Debug;
+		};
+		27E6608423F2CCE40051B3CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MoralBudgetTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cooperative4thecommunity.MoralBudgetTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoralBudget.app/MoralBudget";
+			};
+			name = Release;
+		};
+		27E6608623F2CCE40051B3CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MoralBudgetUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cooperative4thecommunity.MoralBudgetUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MoralBudget;
+			};
+			name = Debug;
+		};
+		27E6608723F2CCE40051B3CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MoralBudgetUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cooperative4thecommunity.MoralBudgetUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MoralBudget;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		27E6605023F2CCE20051B3CF /* Build configuration list for PBXProject "MoralBudget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27E6607D23F2CCE40051B3CF /* Debug */,
+				27E6607E23F2CCE40051B3CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27E6607F23F2CCE40051B3CF /* Build configuration list for PBXNativeTarget "MoralBudget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27E6608023F2CCE40051B3CF /* Debug */,
+				27E6608123F2CCE40051B3CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27E6608223F2CCE40051B3CF /* Build configuration list for PBXNativeTarget "MoralBudgetTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27E6608323F2CCE40051B3CF /* Debug */,
+				27E6608423F2CCE40051B3CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27E6608523F2CCE40051B3CF /* Build configuration list for PBXNativeTarget "MoralBudgetUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27E6608623F2CCE40051B3CF /* Debug */,
+				27E6608723F2CCE40051B3CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 27E6604D23F2CCE20051B3CF /* Project object */;
+}

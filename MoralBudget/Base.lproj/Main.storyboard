@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="o5a-mt-BsI">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Gmv-uf-bGT">
+            <objects>
+                <navigationController id="o5a-mt-BsI" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nDl-ZB-ipx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="cTl-Ri-M4H" kind="relationship" relationship="rootViewController" id="pAP-Wh-d3q"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nLM-wn-hPJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1542" y="130"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="g20-td-k3X">
+            <objects>
+                <viewController id="cTl-Ri-M4H" customClass="RootViewController" customModule="MoralBudget" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0tf-p7-Jbi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Moral Budget" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xat-4c-DCP">
+                                <rect key="frame" x="108.5" y="68" width="103" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flP-Tq-hp6">
+                                <rect key="frame" x="32" y="113" width="256" height="101.5"/>
+                                <string key="text">A city's budget says a lot about its priorities. How much money does it spend on parks or housing? How about summer job programs and police?</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="753" text="If you had a say, what would your priorities be?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ua-C8-J8K">
+                                <rect key="frame" x="32" y="230.5" width="256" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" verticalCompressionResistancePriority="748" translatesAutoresizingMaskIntoConstraints="NO" id="eud-mx-YSo">
+                                <rect key="frame" x="24" y="296" width="272" height="186"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="72" id="QZI-3W-Jbw"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="cTl-Ri-M4H" id="3J9-iv-bYL"/>
+                                    <outlet property="delegate" destination="cTl-Ri-M4H" id="1uS-Ad-tCR"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="755" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p0e-qt-xME">
+                                <rect key="frame" x="120" y="506" width="80" height="30"/>
+                                <state key="normal" title="Get Started"/>
+                                <connections>
+                                    <action selector="pressedStartButton" destination="cTl-Ri-M4H" eventType="touchUpInside" id="Bju-Pa-Q75"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="rOW-iF-1Q4" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="p0e-qt-xME" secondAttribute="bottom" constant="32" id="98F-Hn-fin"/>
+                            <constraint firstItem="xat-4c-DCP" firstAttribute="top" relation="greaterThanOrEqual" secondItem="rOW-iF-1Q4" secondAttribute="top" constant="24" id="Bp6-dr-bgE"/>
+                            <constraint firstItem="eud-mx-YSo" firstAttribute="centerX" secondItem="rOW-iF-1Q4" secondAttribute="centerX" id="FBY-aL-phd"/>
+                            <constraint firstItem="0ua-C8-J8K" firstAttribute="top" secondItem="flP-Tq-hp6" secondAttribute="bottom" constant="16" id="TfN-d6-jtf"/>
+                            <constraint firstItem="eud-mx-YSo" firstAttribute="top" secondItem="0ua-C8-J8K" secondAttribute="bottom" constant="24" id="dbe-kH-VHD"/>
+                            <constraint firstItem="eud-mx-YSo" firstAttribute="leading" secondItem="rOW-iF-1Q4" secondAttribute="leading" constant="24" id="eSu-D2-8yw"/>
+                            <constraint firstItem="0ua-C8-J8K" firstAttribute="centerX" secondItem="rOW-iF-1Q4" secondAttribute="centerX" id="gCp-7q-IoF"/>
+                            <constraint firstItem="p0e-qt-xME" firstAttribute="centerX" secondItem="rOW-iF-1Q4" secondAttribute="centerX" id="gVP-JC-vgd"/>
+                            <constraint firstItem="flP-Tq-hp6" firstAttribute="top" secondItem="xat-4c-DCP" secondAttribute="bottom" constant="24" id="grt-93-0Ic"/>
+                            <constraint firstItem="xat-4c-DCP" firstAttribute="centerX" secondItem="rOW-iF-1Q4" secondAttribute="centerX" id="hob-IA-uSW"/>
+                            <constraint firstItem="flP-Tq-hp6" firstAttribute="leading" secondItem="rOW-iF-1Q4" secondAttribute="leading" constant="32" id="jPx-Jg-fBk"/>
+                            <constraint firstItem="flP-Tq-hp6" firstAttribute="centerX" secondItem="rOW-iF-1Q4" secondAttribute="centerX" id="mg9-3K-aYl"/>
+                            <constraint firstItem="xat-4c-DCP" firstAttribute="top" secondItem="rOW-iF-1Q4" secondAttribute="top" priority="700" constant="48" id="u1K-HS-Ika"/>
+                            <constraint firstItem="0ua-C8-J8K" firstAttribute="leading" secondItem="flP-Tq-hp6" secondAttribute="leading" id="vMr-bu-wzJ"/>
+                            <constraint firstItem="p0e-qt-xME" firstAttribute="top" secondItem="eud-mx-YSo" secondAttribute="bottom" constant="24" id="y8P-E9-JX4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rOW-iF-1Q4"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="yc3-IU-2lc"/>
+                    <connections>
+                        <outlet property="cityPicker" destination="eud-mx-YSo" id="4ew-Yh-dsY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vwL-zI-7He" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-746" y="130"/>
+        </scene>
+    </scenes>
+</document>
