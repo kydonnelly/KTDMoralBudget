@@ -11,6 +11,8 @@ import KTDIconFont
 public enum MoralBudget: unichar, IconFont {
     case notFound = 0x0
     
+    case ellipsis = 0xe908
+    case tramway = 0xe909
     case publicworks = 0xe907
     case health = 0xe902
     case legal = 0xe903

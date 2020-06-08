@@ -14,6 +14,7 @@
 		270B2710248DB789001804D6 /* BudgetItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270B270F248DB789001804D6 /* BudgetItem.swift */; };
 		270B2712248DB7B4001804D6 /* BudgetGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270B2711248DB7B4001804D6 /* BudgetGroup.swift */; };
 		270B2718248DC8E5001804D6 /* moral_budget.db in Resources */ = {isa = PBXBuildFile; fileRef = 270B2717248DC8E5001804D6 /* moral_budget.db */; };
+		270B271A248E1E66001804D6 /* MoralBudget+Attributions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270B2719248E1E66001804D6 /* MoralBudget+Attributions.swift */; };
 		2710DCC5240F264700365E87 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710DCC4240F264700365E87 /* UIColor+Hex.swift */; };
 		2710DCC72411C62E00365E87 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710DCC62411C62E00365E87 /* GradientView.swift */; };
 		2710DD5A2421F0A100365E87 /* BudgetMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710DD592421F0A100365E87 /* BudgetMapViewController.swift */; };
@@ -70,6 +71,7 @@
 		270B270F248DB789001804D6 /* BudgetItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetItem.swift; sourceTree = "<group>"; };
 		270B2711248DB7B4001804D6 /* BudgetGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetGroup.swift; sourceTree = "<group>"; };
 		270B2717248DC8E5001804D6 /* moral_budget.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = moral_budget.db; sourceTree = "<group>"; };
+		270B2719248E1E66001804D6 /* MoralBudget+Attributions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoralBudget+Attributions.swift"; sourceTree = "<group>"; };
 		2710DCC4240F264700365E87 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		2710DCC62411C62E00365E87 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		2710DD592421F0A100365E87 /* BudgetMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetMapViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 			children = (
 				2725537524393E84009020EC /* MoralBudget.ttf */,
 				2725537624393E84009020EC /* MoralBudget.swift */,
+				270B2719248E1E66001804D6 /* MoralBudget+Attributions.swift */,
 			);
 			path = Icons;
 			sourceTree = "<group>";
@@ -428,6 +431,7 @@
 				270B2712248DB7B4001804D6 /* BudgetGroup.swift in Sources */,
 				270B270C248DB712001804D6 /* BudgetCategory.swift in Sources */,
 				2725536F24301A3B009020EC /* CoinsDraggableProtocol.swift in Sources */,
+				270B271A248E1E66001804D6 /* MoralBudget+Attributions.swift in Sources */,
 				27D7FE3E23F8C6CA0052A2F6 /* BuildBudgetViewController.swift in Sources */,
 				270B270A248DB459001804D6 /* City.swift in Sources */,
 				2725537924393E84009020EC /* MoralBudget.swift in Sources */,

@@ -35,14 +35,14 @@ extension BudgetCategory {
         case .library: return "books"
         case .parksAndRec: return "park"
         case .housing: return "housing"
-        case .transportation: return "infrastructure" // todo
+        case .transportation: return "tramway"
         case .obligations: return "debt"
         case .infrastructure: return "infrastructure"
         case .jobs: return "work"
         case .publicWorks: return "publicworks"
         case .administration: return "legal"
         case .planning: return "planning"
-        case .uncategorized: return "policeman" // todo
+        case .uncategorized: return "ellipsis"
         }
     }
     
@@ -54,14 +54,14 @@ extension BudgetCategory {
         case .library: return 0xA89959
         case .parksAndRec: return 0x4B8F4B
         case .housing: return 0xC5D1EB
-        case .transportation: return 0xEC4E20 // todo
+        case .transportation: return 0xEDAE49
         case .obligations: return 0x7A6C5D
         case .infrastructure: return 0xEC4E20
         case .jobs: return 0x8BB174
         case .publicWorks: return 0xECA72C
         case .administration: return 0x4E8C85
         case .planning: return 0xAF8CE2
-        case .uncategorized: return 0xEC4E20 // todo
+        case .uncategorized: return 0xFBF5F3
         }
     }
     
