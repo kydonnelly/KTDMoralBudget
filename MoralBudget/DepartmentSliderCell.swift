@@ -41,10 +41,10 @@ public class DepartmentSliderCell : UITableViewCell {
         
         self.iconImageView.setIcon(name: departmentInfo.iconName)
         self.sliderView.tintColor = departmentInfo.iconColor
-        self.gradientView.update(colors: [UIColor(hexString: departmentInfo.hexColor, alpha: 0.75),
-                                          UIColor(hexString: departmentInfo.hexColor, alpha: 0.60),
-                                          UIColor(hexString: departmentInfo.hexColor, alpha: 0.15),
-                                          UIColor(hexString: departmentInfo.hexColor, alpha: 0.0)],
+        self.gradientView.update(colors: [UIColor(hexValue: departmentInfo.category.iconColorHex, alpha: 0.75),
+                                          UIColor(hexValue: departmentInfo.category.iconColorHex, alpha: 0.60),
+                                          UIColor(hexValue: departmentInfo.category.iconColorHex, alpha: 0.15),
+                                          UIColor(hexValue: departmentInfo.category.iconColorHex, alpha: 0.0)],
                                  direction: .horizontal)
         
         self.refresh(value: initialValue)

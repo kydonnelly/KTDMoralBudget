@@ -12,8 +12,12 @@ class RootViewController : UIViewController {
     
     @IBOutlet var cityPicker: UIPickerView!
     
-    fileprivate var cities: [String] {
-        return BudgetDatabase.shared.allCities
+    fileprivate var cities: [City]!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.cities = BudgetDatabase.shared.allCities().sorted { $0.name < $1.name }
     }
     
     @IBAction func pressedStartButton() {
@@ -25,7 +29,11 @@ class RootViewController : UIViewController {
         let cityIndex = self.cityPicker.selectedRow(inComponent: 0)
         let city = self.cities[cityIndex]
         
-        let departmentInfos = BudgetDatabase.shared.departmentInfos(city: city)
+        guard let budgetItems = BudgetDatabase.shared.budgetItems(city: city) else {
+            return
+        }
+        
+        let departmentInfos = budgetItems.map { DepartmentInfo(category: $0.category, caption: $0.title, details: $0.description, allocation: $0.percentage) }
         
         budgetMapVC.setup(city: city, departments: departmentInfos)
         
@@ -53,7 +61,7 @@ extension RootViewController: UIPickerViewDelegate {
             return nil
         }
         
-        return self.cities[row]
+        return self.cities[row].name
     }
     
 }

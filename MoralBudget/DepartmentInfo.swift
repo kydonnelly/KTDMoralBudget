@@ -10,21 +10,24 @@ import Foundation
 import UIKit
 
 struct DepartmentInfo {
-    let name: String
+    let category: BudgetCategory
     let caption: String
     let details: String
     let allocation: Double
-    
-    let iconName: String
-    let hexColor: String
 }
-
-extension DepartmentInfo : Decodable { }
 
 extension DepartmentInfo {
     
+    var name: String {
+        return String(describing: self.category)
+    }
+    
+    var iconName: String {
+        return self.category.iconName
+    }
+    
     var iconColor: UIColor {
-        return UIColor(hexString: self.hexColor, alpha: 1)
+        return UIColor(hexValue: self.category.iconColorHex, alpha: 1)
     }
     
 }
